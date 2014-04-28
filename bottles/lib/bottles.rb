@@ -1,12 +1,7 @@
 class Bottles
 
   def verse(i)
-    case i
-    when 0..99
-      "#{amount_starting(i).capitalize} #{pluralize(i, container)} #{item_suffix} #{where}, #{amount_starting(i)} #{pluralize(i, container)} #{item_suffix}.\n#{second_line_beg(i)}, #{amount_ending(i)} #{pluralize(i-1, container)} #{item_suffix} #{where}.\n"
-    else
-      "#{amount_starting(i).capitalize} #{pluralize(i, container)} #{item_suffix} #{where}, #{amount_starting(i)} #{pluralize(i, container)} #{item_suffix}.\n#{second_line_beg(i)}, #{amount_ending(i)} #{pluralize(i-1, container)} #{item_suffix} #{where}.\n"
-    end
+    "#{amount_starting(i).capitalize} #{pluralize(i, container)} #{item_suffix} #{where}, #{amount_starting(i)} #{pluralize(i, container)} #{item_suffix}.\n#{second_line_beg(i)}, #{amount_ending(i)} #{pluralize(i-1, container)} #{item_suffix} #{where}.\n"
   end
 
   def verses(s, e)
