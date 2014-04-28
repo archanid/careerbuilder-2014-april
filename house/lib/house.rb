@@ -5,7 +5,7 @@ class House
   end
 
   def line(i)
-      "This is %s.\n" % lines.last(i).join(" ")
+      "This is %s.\n" % LINES.last(i).join(" ")
   end
 
   def lines
