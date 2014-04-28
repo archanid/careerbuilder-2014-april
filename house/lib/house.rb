@@ -9,7 +9,7 @@ class House
     when 1
       "This is %s.\n" % ["the house that Jack built"]
     when 2
-      "This is the malt that lay in %s.\n" % ["the malt that lay in", "the house that Jack built"]
+      "This is %s %s.\n" % ["the malt that lay in", "the house that Jack built"]
       "This is the malt that lay in %s.\n" % ["the house that Jack built"]
     when 3
       "This is the rat that ate the malt that lay in the house that Jack built.\n"
