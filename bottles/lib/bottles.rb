@@ -1,7 +1,7 @@
 class Bottles
 
   def verse(i)
-    "#{amount_starting(i).capitalize} #{pluralize(i, container)} #{item_suffix} #{where}, #{amount_starting(i)} #{pluralize(i, container)} #{item_suffix}.\n#{second_line_beg(i)}, #{amount_ending(i)} #{pluralize(i-1, container)} #{item_suffix} #{where}.\n"
+    "#{amount_starting(i).capitalize} #{pluralize(i, container)} #{item_suffix} #{where}, #{amount_starting(i)} #{pluralize(i, container)} #{item_suffix}.\n#{what_to_do(i)}, #{amount_ending(i)} #{pluralize(i-1, container)} #{item_suffix} #{where}.\n"
   end
 
   def verses(s, e)
@@ -22,7 +22,7 @@ class Bottles
 
   def amount_ending(i)
     if i == 1
-      "no more"
+      amount_starting(i-1)
     elsif i == 0
       99
     else
@@ -42,7 +42,7 @@ class Bottles
     "on the wall"
   end
 
-  def second_line_beg(i)
+  def what_to_do(i)
     if i == 0
       "Go to the store and buy some more"
     elsif i == 1
