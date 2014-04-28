@@ -18,6 +18,11 @@ class Bottles
   end
 
   def amount_starting(i)
+    if i == 0
+      "no more"
+    else
+      "#{i}"
+    end
   end
 
   def amount_ending(i)
