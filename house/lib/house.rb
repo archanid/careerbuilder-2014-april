@@ -13,7 +13,7 @@ class House
     when 1
       "This is %s.\n" % ["the house that Jack built"].join(" ")
     when 2
-      "This is %s.\n" % ["the malt that lay in", "the house that Jack built"].join(" ")
+      "This is %s.\n" % ballad_of_jack.last(2).join(" ")
     when 3
       "This is %s.\n" % ballad_of_jack.join(" ")
     when 4
