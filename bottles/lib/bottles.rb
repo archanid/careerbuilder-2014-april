@@ -7,9 +7,9 @@ class Bottles
     when 2
       "2 bottles %s %s, 2 bottles of beer.\nTake one down and pass it around, 1 bottle of beer on the wall.\n" % [item_suffix, where]
     when 1
-      "1 bottle of beer on the wall, 1 bottle of beer.\nTake it down and pass it around, no more bottles of beer on the wall.\n"
+      "1 bottle %s %s, 1 bottle of beer.\nTake it down and pass it around, no more bottles of beer on the wall.\n" % [item_suffix, where]
     else
-      "No more bottles of beer on the wall, no more bottles of beer.\nGo to the store and buy some more, 99 bottles of beer on the wall.\n"
+      "No more bottles %s %s, no more bottles of beer.\nGo to the store and buy some more, 99 bottles of beer on the wall.\n" % [item_suffix, where]
     end
   end
 
