@@ -2,7 +2,7 @@ class Bottles
 
   def verse(i)
     case i
-    when 3..99
+    when 1..99
       "#{i} #{pluralize(i, container)} #{item_suffix} #{where}, #{i} #{pluralize(i, container)} #{item_suffix}.\n#{second_line_beg(i)}, #{amount(i)} #{pluralize(i-1, container)} #{item_suffix} #{where}.\n"
     when 2
       "#{i} #{pluralize(i, container)} #{item_suffix} #{where}, #{i} #{pluralize(i, container)} #{item_suffix}.\n#{second_line_beg(i)}, #{amount(i)} #{pluralize(i-1, container)} #{item_suffix} #{where}.\n"
