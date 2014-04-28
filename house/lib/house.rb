@@ -8,16 +8,16 @@ class House
     ["the cat that killed", "the rat that ate", "the malt that lay in", "the house that Jack built"]
   end
 
-  def line(num)
-    case num
+  def line(i)
+    case i
     when 1
-      "This is %s.\n" % lines.last(1).join(" ")
+      "This is %s.\n" % lines.last(i).join(" ")
     when 2
-      "This is %s.\n" % lines.last(2).join(" ")
+      "This is %s.\n" % lines.last(i).join(" ")
     when 3
-      "This is %s.\n" % lines.last(3).join(" ")
+      "This is %s.\n" % lines.last(i).join(" ")
     when 4
-      "This is %s.\n" % lines.last(4).join(" ")
+      "This is %s.\n" % lines.last(i).join(" ")
     when 5
       "This is the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
     when 6
