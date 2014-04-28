@@ -5,7 +5,7 @@ class Bottles
     when 1..99
       "#{amount_starting(i)} #{pluralize(i, container)} #{item_suffix} #{where}, #{i} #{pluralize(i, container)} #{item_suffix}.\n#{second_line_beg(i)}, #{amount_ending(i)} #{pluralize(i-1, container)} #{item_suffix} #{where}.\n"
     else
-      "#{amount_starting(i)} #{pluralize(i, container)} #{item_suffix} #{where}, no more #{pluralize(i, container)} #{item_suffix}.\n#{second_line_beg(i)}, 99 #{pluralize(i-1, container)} #{item_suffix} #{where}.\n"
+      "#{amount_starting(i)} #{pluralize(i, container)} #{item_suffix} #{where}, no more #{pluralize(i, container)} #{item_suffix}.\n#{second_line_beg(i)}, #{amount_ending(i)} #{pluralize(i-1, container)} #{item_suffix} #{where}.\n"
     end
   end
 
@@ -28,6 +28,8 @@ class Bottles
   def amount_ending(i)
     if i == 1
       "no more"
+    elsif i == 0
+      99
     else
       "#{i-1}"
     end
