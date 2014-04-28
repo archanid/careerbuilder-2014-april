@@ -26,7 +26,7 @@ class Bottles
     elsif i == 0
       99
     else
-      "#{i-1}"
+      amount_starting(i-1)
     end
   end
 
