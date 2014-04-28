@@ -21,24 +21,12 @@ class Bottles
     verses(99, 0)
   end
 
-  def bottle_item
-    "bottle"
-  end
-
-  def sixpack_item
-    "six pack"
+  def containers
+    "bottles"
   end
 
   def item_suffix
     "of beer"
-  end
-
-  def beer_item(i)
-    if i%6
-      pluralize(i, bottle_item)
-    else
-      pluralize(i, sixpack_item)
-    end
   end
 
   def where
@@ -46,7 +34,7 @@ class Bottles
   end
 
   def second_line_beg(i)
-    "Take __ down and pass it around"
+    "Take one down and pass it around"
   end
 
   def second_line_end(i)
