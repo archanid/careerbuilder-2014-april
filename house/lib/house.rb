@@ -4,6 +4,10 @@ class House
     1.upto(12).map {|i| line(i)}.join("\n")
   end
 
+  def ballad_of_jack
+    ["the rat that ate", "the malt that lay in", "the house that Jack built"]
+  end
+
   def line(num)
     case num
     when 1
