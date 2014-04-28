@@ -1,6 +1,7 @@
 class House
 
 def recite
+  1.upto(12).map {|i| line(i)}
 
 <<-TEXT
 This is the house that Jack built.
