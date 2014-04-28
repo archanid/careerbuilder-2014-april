@@ -3,13 +3,13 @@ class Bottles
   def verse(i)
     case i
     when 3..99
-      "#{i} #{containers} %s %s, #{i} bottles %s.\nTake one down and pass it around, #{i-1} bottles %s %s.\n" % [item_suffix, where, item_suffix, item_suffix, where]
+      "#{i} #{containers} %s %s, #{i} #{containers} %s.\nTake one down and pass it around, #{i-1} #{containers} %s %s.\n" % [item_suffix, where, item_suffix, item_suffix, where]
     when 2
-      "2 bottles %s %s, 2 bottles %s.\nTake one down and pass it around, 1 bottle %s %s.\n" % [item_suffix, where, item_suffix, item_suffix, where]
+      "2 #{containers} %s %s, 2 #{containers} %s.\nTake one down and pass it around, 1 bottle %s %s.\n" % [item_suffix, where, item_suffix, item_suffix, where]
     when 1
       "1 bottle %s %s, 1 bottle %s.\nTake it down and pass it around, no more bottles %s %s.\n" % [item_suffix, where, item_suffix, item_suffix, where]
     else
-      "No more bottles %s %s, no more bottles %s.\nGo to the store and buy some more, 99 bottles %s %s.\n" % [item_suffix, where, item_suffix, item_suffix, where]
+      "No more #{containers} %s %s, no more #{containers} %s.\nGo to the store and buy some more, 99 #{containers} %s %s.\n" % [item_suffix, where, item_suffix, item_suffix, where]
     end
   end
 
