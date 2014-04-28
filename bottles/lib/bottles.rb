@@ -3,7 +3,7 @@ class Bottles
   def verse(i)
     case i
     when 3..99
-      "#{i} bottles %s %s, #{i} bottles %s.\nTake one down and pass it around, #{i-1} bottles %s %s.\n" % [item_suffix, where, item_suffix, item_suffix, where]
+      "#{i} #{containers} %s %s, #{i} bottles %s.\nTake one down and pass it around, #{i-1} bottles %s %s.\n" % [item_suffix, where, item_suffix, item_suffix, where]
     when 2
       "2 bottles %s %s, 2 bottles %s.\nTake one down and pass it around, 1 bottle %s %s.\n" % [item_suffix, where, item_suffix, item_suffix, where]
     when 1
