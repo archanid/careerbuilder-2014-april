@@ -11,7 +11,7 @@ def line(num)
   when 2
     "This is %s %s.\n" % ["the malt that lay in", "the house that Jack built"]
   when 3
-    "This is %s.\n" % "the rat that ate the malt that lay in the house that Jack built"
+    "This is %s %s %s.\n" % ["the rat that ate", "the malt that lay in," "the house that Jack built"]
   when 4
     "This is the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
   when 5
