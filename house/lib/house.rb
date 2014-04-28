@@ -7,7 +7,7 @@ end
 def line(num)
   case num
   when 1
-    "This is %s.\n" % ["the house that Jack built"]
+    "This is %s.\n" % ["the house that Jack built"].join(" ")
   when 2
     "This is %s.\n" % ["the malt that lay in", "the house that Jack built"].join(" ")
   when 3
