@@ -5,7 +5,7 @@ class Bottles
     when 3..99
       "#{i} #{pluralize(i, container)} #{item_suffix} #{where}, #{i} #{pluralize(i, container)} #{item_suffix}.\n#{second_line_beg(i)}, #{i-1} #{pluralize(i-1, container)} #{item_suffix} #{where}.\n"
     when 2
-      "#{i} #{pluralize(i, container)} #{item_suffix} #{where}, #{i} #{pluralize(i, container)} #{item_suffix}.\n#{second_line_beg(i)}, 1 #{pluralize(i-1, container)} #{item_suffix} #{where}.\n"
+      "#{i} #{pluralize(i, container)} #{item_suffix} #{where}, #{i} #{pluralize(i, container)} #{item_suffix}.\n#{second_line_beg(i)}, #{i-1} #{pluralize(i-1, container)} #{item_suffix} #{where}.\n"
     when 1
       "#{i} #{pluralize(i, container)} #{item_suffix} #{where}, #{i} #{pluralize(i, container)} #{item_suffix}.\n#{second_line_beg(i)}, no more #{pluralize(i-1, container)} #{item_suffix} #{where}.\n"
     else
