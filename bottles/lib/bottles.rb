@@ -21,9 +21,7 @@ class Bottles
   end
 
   def amount_ending(i)
-    if i == 1
-      amount_starting(i-1)
-    elsif i == 0
+    if i == 0
       99
     else
       amount_starting(i-1)
