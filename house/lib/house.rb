@@ -10,6 +10,7 @@ class House
       "This is %s.\n" % ["the house that Jack built"]
     when 2
       "This is %s %s.\n" % ["the malt that lay in", "the house that Jack built"]
+      "This is %s %s.\n" % ["the malt that lay in", "the house that Jack built"]
     when 3
       "This is %s.\n" % ["the rat that ate", "the malt that lay in", "the house that Jack built"].join(" ")
     when 4
