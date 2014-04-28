@@ -12,6 +12,8 @@ class Bottles
     verses(99, 0)
   end
 
+  private
+
   def amount_starting(i)
     if i == 0
       "no more"
