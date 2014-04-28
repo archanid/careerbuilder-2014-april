@@ -5,9 +5,9 @@ class Bottles
     when 3..99
       "#{i} #{pluralize(i, container)} #{item_suffix} #{where}, #{i} #{pluralize(i, container)} #{item_suffix}.\n#{second_line_beg(i)}, #{i-1} #{pluralize(i-1, container)} #{item_suffix} #{where}.\n"
     when 2
-      "2 #{pluralize(i, container)} #{item_suffix} #{where}, 2 #{pluralize(i, container)} #{item_suffix}.\n#{second_line_beg(i)}, 1 #{pluralize(i-1, container)} #{item_suffix} #{where}.\n"
+      "#{i} #{pluralize(i, container)} #{item_suffix} #{where}, 2 #{pluralize(i, container)} #{item_suffix}.\n#{second_line_beg(i)}, 1 #{pluralize(i-1, container)} #{item_suffix} #{where}.\n"
     when 1
-      "1 #{pluralize(i, container)} #{item_suffix} #{where}, 1 #{pluralize(i, container)} #{item_suffix}.\n#{second_line_beg(i)}, no more #{pluralize(i-1, container)} #{item_suffix} #{where}.\n"
+      "#{i} #{pluralize(i, container)} #{item_suffix} #{where}, 1 #{pluralize(i, container)} #{item_suffix}.\n#{second_line_beg(i)}, no more #{pluralize(i-1, container)} #{item_suffix} #{where}.\n"
     else
       "No more #{pluralize(i, container)} #{item_suffix} #{where}, no more #{pluralize(i, container)} #{item_suffix}.\n#{second_line_beg(i)}, 99 #{pluralize(i-1, container)} #{item_suffix} #{where}.\n"
     end
@@ -41,10 +41,6 @@ class Bottles
     else
       "Take one down and pass it around"
     end
-  end
-
-  def second_line_end(i)
-    beer_item(i-1) + " " + where
   end
 
   def pluralize(how_many, container)
