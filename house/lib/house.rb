@@ -5,13 +5,13 @@ class House
   end
 
   def line( n )
-    "This is %s" % (0...n).to_a.reverse.map {|x| lines[x]}.join
+    "This is %s.\n" % (0...n).to_a.reverse.map {|x| lines[x]}.join
 
   end
 
   def lines
     [
-      "the house that Jack built.\n",
+      "the house that Jack built",
       "the malt that lay in ",
       "the rat that ate ",
       "the cat that killed ",
