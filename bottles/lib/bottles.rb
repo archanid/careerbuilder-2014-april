@@ -5,11 +5,11 @@ class Bottles
     when 3..99
       "#{i} #{containers} #{item_suffix} #{where}, #{i} #{containers} %s.\nTake one down and pass it around, #{i-1} #{containers} %s %s.\n" % [item_suffix, item_suffix, where]
     when 2
-      "2 #{containers} #{item_suffix} %s, 2 #{containers} %s.\nTake one down and pass it around, 1 bottle %s %s.\n" % [where, item_suffix, item_suffix, where]
+      "2 #{containers} #{item_suffix} #{where}, 2 #{containers} %s.\nTake one down and pass it around, 1 bottle %s %s.\n" % [item_suffix, item_suffix, where]
     when 1
-      "1 bottle #{item_suffix} %s, 1 bottle %s.\nTake it down and pass it around, no more bottles %s %s.\n" % [where, item_suffix, item_suffix, where]
+      "1 bottle #{item_suffix} #{where}, 1 bottle %s.\nTake it down and pass it around, no more bottles %s %s.\n" % [item_suffix, item_suffix, where]
     else
-      "No more #{containers} #{item_suffix} %s, no more #{containers} %s.\nGo to the store and buy some more, 99 #{containers} %s %s.\n" % [where, item_suffix, item_suffix, where]
+      "No more #{containers} #{item_suffix} #{where}, no more #{containers} %s.\nGo to the store and buy some more, 99 #{containers} %s %s.\n" % [item_suffix, item_suffix, where]
     end
   end
 
