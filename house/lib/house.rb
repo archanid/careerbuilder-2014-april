@@ -15,7 +15,7 @@ class House
     when 2
       "This is %s.\n" % ballad_of_jack.last(2).join(" ")
     when 3
-      "This is %s.\n" % ballad_of_jack.join(" ")
+      "This is %s.\n" % ballad_of_jack.last(3).join(" ")
     when 4
       "This is the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
     when 5
