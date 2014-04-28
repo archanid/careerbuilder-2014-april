@@ -11,9 +11,9 @@ class House
   def line(num)
     case num
     when 1
-      "This is %s.\n" % ["the house that Jack built"].join(" ")
+      "This is %s.\n" % lines.last(1).join(" ")
     when 2
-      "This is %s.\n" % ["the malt that lay in", "the house that Jack built"].join(" ")
+      "This is %s.\n" % lines.last(2).join(" ")
     when 3
       "This is %s.\n" % lines.last(3).join(" ")
     when 4
