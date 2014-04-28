@@ -15,7 +15,7 @@ class House
     when 2
       "This is %s.\n" % ["the malt that lay in", "the house that Jack built"].join(" ")
     when 3
-      "This is %s.\n" % ["the rat that ate", "the malt that lay in", "the house that Jack built"].join(" ")
+      "This is %s.\n" % lines.last(3).join(" ")
     when 4
       "This is %s.\n" % lines.join(" ")
     when 5
