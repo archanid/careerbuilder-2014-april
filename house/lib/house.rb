@@ -13,7 +13,7 @@ def line(num)
   when 3
     "This is %s.\n" % ["the rat that ate", "the malt that lay in", "the house that Jack built"].join(" ")
   when 4
-    "This is %s %s %s %s.\n" % ["the cat that killed", "the rat that ate", "the malt that lay in", "the house that Jack built"]
+    "This is %s.\n" % ["the cat that killed", "the rat that ate", "the malt that lay in", "the house that Jack built"].join(" ")
   when 5
     "This is the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
   when 6
