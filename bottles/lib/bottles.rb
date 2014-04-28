@@ -4,10 +4,6 @@ class Bottles
     case i
     when 1..99
       "#{i} #{pluralize(i, container)} #{item_suffix} #{where}, #{i} #{pluralize(i, container)} #{item_suffix}.\n#{second_line_beg(i)}, #{amount(i)} #{pluralize(i-1, container)} #{item_suffix} #{where}.\n"
-    when 2
-      "#{i} #{pluralize(i, container)} #{item_suffix} #{where}, #{i} #{pluralize(i, container)} #{item_suffix}.\n#{second_line_beg(i)}, #{amount(i)} #{pluralize(i-1, container)} #{item_suffix} #{where}.\n"
-    when 1
-      "#{i} #{pluralize(i, container)} #{item_suffix} #{where}, #{i} #{pluralize(i, container)} #{item_suffix}.\n#{second_line_beg(i)}, #{amount(i)} #{pluralize(i-1, container)} #{item_suffix} #{where}.\n"
     else
       "No more #{pluralize(i, container)} #{item_suffix} #{where}, no more #{pluralize(i, container)} #{item_suffix}.\n#{second_line_beg(i)}, 99 #{pluralize(i-1, container)} #{item_suffix} #{where}.\n"
     end
