@@ -19,8 +19,6 @@ class Bottles
       Variant0.new(n)
     when 1
       Variant1.new(n)
-    # when -1
-    #   VariantNeg1.new(n)
     when 2
       Variant2.new(n)
     else
@@ -101,12 +99,6 @@ class Variant1 < Variant
 
   def current_ewer
     "bottle"
-  end
-end
-
-class VariantNeg1 < Variant
-  def current_quantity
-    99.to_s
   end
 end
 
