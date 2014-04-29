@@ -48,7 +48,7 @@ class Verse
     end.to_s
   end
 
-  def remaining_quantity(n)
+  def remaining_quantity(n=self.n)
     case n
     when 0
       99
