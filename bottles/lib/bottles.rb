@@ -33,7 +33,7 @@ class Verse
     when 0
       "Go to the store and buy some more"
     else
-      "Take #{noun(n)} down and pass it around"
+      "Take #{noun} down and pass it around"
     end
   end
 
@@ -59,7 +59,7 @@ class Verse
     end.to_s
   end
 
-  def noun(n)
+  def noun
     case n
     when 1
       "it"
