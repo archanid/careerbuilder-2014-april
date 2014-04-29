@@ -27,66 +27,6 @@ class Verse
     "#{vh.what_to_do}," + 
     " #{vh.remaining_quantity} #{vh.remaining_ewer} of beer on the wall.\n"
   end
-
-  private
-
-  def what_to_do
-    case n
-    when 0
-      "Go to the store and buy some more"
-    else
-      "Take #{noun} down and pass it around"
-    end
-  end
-
-  def current_quantity
-    case n
-    when -1
-      99
-    when 0
-      "no more"
-    else
-      n
-    end.to_s
-  end
-
-  def remaining_quantity
-    case n
-    when 0
-      99
-    when 1
-      "no more"
-    else
-      n - 1
-    end.to_s
-  end
-
-  def noun
-    case n
-    when 1
-      "it"
-    else
-      "one"
-    end
-  end
-
-  def current_ewer
-    case n
-    when 1
-      "bottle"
-    else
-      "bottles"
-    end
-  end
-
-  def remaining_ewer
-    case n
-    when 2
-      "bottle"
-    else
-      "bottles"
-    end
-  end
 end
 
 class VerseHelper
