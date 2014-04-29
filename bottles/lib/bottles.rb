@@ -8,7 +8,7 @@ class Bottles
   end
 
   def verse(num)
-    Verse.new(num).verse(num)
+    Verse.new(num).verse
   end
 end
 
@@ -19,7 +19,7 @@ class Verse
     @n = n
   end
 
-  def verse(num=self.num)
+  def verse(num=self.n)
     "#{quantity(num).capitalize} #{ewer(num)} of beer on the wall," + 
     " #{quantity(num)} #{ewer(num)} of beer.\n" + 
     "#{what_to_do(num)}," + 
