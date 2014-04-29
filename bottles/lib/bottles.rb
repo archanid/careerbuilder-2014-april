@@ -64,14 +64,6 @@ class Bottles
       "bottles"
     end
   end
-
-  def ewer(n)
-    if n == 1
-      "bottle"
-    else
-      "bottles"
-    end
-  end
 end
 
 # first strategy: when 2 and else are the closest to each other, so it would require the smallest difference change. make two changes, first the 2/num, then the bottle/s
