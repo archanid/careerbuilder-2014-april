@@ -58,6 +58,8 @@ class Variant
   def_delegator :@remaining_containers, :quantity, :remaining_quantity
   def_delegator :@remaining_containers, :name,     :remaining_container_name
 
+  def_delegator :@current_containers, :what_to_do
+
   attr_reader :n, 
               :current_containers, 
               :remaining_containers
