@@ -36,7 +36,7 @@ class Verse
     end
   end
 
-  def quantity(n)
+  def quantity(n=self.n)
     if n == -1
       99
     elsif n == 0
