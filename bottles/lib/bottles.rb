@@ -23,10 +23,10 @@ class Bottles
 end
 
 class Verse
-  attr_reader :vh
+  attr_reader :variant
 
-  def initialize(vh)
-    @vh = vh
+  def initialize(variant)
+    @variant = variant
   end
 
   def to_s
@@ -37,23 +37,23 @@ class Verse
   end
 
   def current_quantity
-    vh.current_quantity
+    variant.current_quantity
   end
 
   def current_ewer
-    vh.current_ewer
+    variant.current_ewer
   end
 
   def what_to_do
-    vh.what_to_do
+    variant.what_to_do
   end
 
   def remaining_quantity
-    vh.remaining_quantity
+    variant.remaining_quantity
   end
 
   def remaining_ewer
-    vh.remaining_ewer
+    variant.remaining_ewer
   end
 end
 
