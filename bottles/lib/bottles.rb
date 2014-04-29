@@ -60,6 +60,7 @@ class Variant
   end
 
   def current_quantity
+    current_containers.quantity
     n.to_s
   end
 
@@ -117,6 +118,12 @@ end
 class Container
 
   def initialize(n)
+  end
+
+  def quantity
+  end
+
+  def name
   end
 
 end
