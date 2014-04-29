@@ -53,7 +53,9 @@ class Variant
   def_delegators :@remaining_containers, :remaining_quantity,
                                          :remaining_container_name
 
-  attr_reader :n, :current_containers, :remaining_containers
+  attr_reader :n, 
+              :current_containers, 
+              :remaining_containers
 
   def container_for(n)
     case n
@@ -69,8 +71,8 @@ class Variant
   end
 
   def initialize(n)
-    @n = n
-    @current_containers = container_for(n)
+    @n                    = n
+    @current_containers   = container_for(n)
     @remaining_containers = container_for(n-1)
   end
 
