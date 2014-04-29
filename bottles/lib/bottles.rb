@@ -28,7 +28,7 @@ class Verse
 
   private
 
-  def what_to_do(n=self.n)
+  def what_to_do
     if n == 0
       "Go to the store and buy some more"
     else
