@@ -35,13 +35,12 @@ class Bottles
   end
 
   def remaining_quantity(n)
-    n = n - 1
-    if n == -1
+    if n == 0
       99
-    elsif n == 0
+    elsif n == 1
       "no more"
     else
-      n
+      n - 1
     end.to_s
   end
 
