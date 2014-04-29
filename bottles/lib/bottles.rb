@@ -16,8 +16,8 @@ class Bottles
   def kindofvariant(n)
     case n
     when 0
-      Object.const_get("Variant#{n}")
       Variant0.new(n)
+      Object.const_get("Variant#{n}").new(n)
     when 1
       Variant1.new(n)
     when 2
