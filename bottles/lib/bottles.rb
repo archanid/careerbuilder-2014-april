@@ -39,7 +39,6 @@ class Verse
 
   def initialize(n)
     @variant              = variant_for(n)
-    @n                    = variant.n
     @current_containers   = container_for(n)
     @remaining_containers = container_for(n-1)
   end
