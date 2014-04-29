@@ -12,16 +12,6 @@ class Bottles
   def verse(n)
     Verse.new(n).to_s
   end
-
-  private
-
-  def variant_for(n)
-    begin
-      Object.const_get("Variant#{n}")
-    rescue
-      Variant
-    end.new(n)
-  end
 end
 
 
