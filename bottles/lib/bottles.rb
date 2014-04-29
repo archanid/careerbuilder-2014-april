@@ -28,12 +28,10 @@ class Verse
 
   def_delegator :current_containers, :what_to_do, :old_what_to_do
 
-  attr_reader :variant,
-              :current_containers,
+  attr_reader :current_containers,
               :remaining_containers
 
   def initialize(n)
-    @variant              = variant_for(n)
     @current_containers   = container_for(n)
     @remaining_containers = container_for(n-1)
   end
