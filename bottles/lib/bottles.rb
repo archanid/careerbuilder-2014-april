@@ -85,7 +85,6 @@ class Verse
       "bottles"
     end
   end
-
 end
 
 # first strategy: when 2 and else are the closest to each other, so it would require the smallest difference change. make two changes, first the 2/num, then the bottle/s
@@ -103,3 +102,5 @@ end
 # think about cohesion. Song relies only on verses. verses only relies on verse. verse relies on all the private ones below.
 
 # Now extract class again.
+
+# That worked. Now we can start to implement the new requirement.
