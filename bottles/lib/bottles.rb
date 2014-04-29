@@ -44,7 +44,6 @@ class Verse
     "#{what_to_do}," + 
     " #{remaining_quantity} #{remaining_ewer} of beer on the wall.\n"
   end
-
 end
 
 class Variant
