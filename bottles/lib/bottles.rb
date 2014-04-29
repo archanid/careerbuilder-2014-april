@@ -49,6 +49,11 @@ class Bottles
   end
 
   def current_ewer(n)
+    if n == 1
+      "bottle"
+    else
+      "bottles"
+    end
   end
 
   def remaining_ewer(n)
