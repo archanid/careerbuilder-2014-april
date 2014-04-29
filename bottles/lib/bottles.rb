@@ -72,10 +72,12 @@ class Variant
   end
 
   def current_ewer
+    current_containers.name
     "bottles"
   end
 
   def remaining_ewer
+    remaining_containers.name
     "bottles"
   end
 end
@@ -126,6 +128,7 @@ class Container
   end
 
   def name
+    "bottles"
   end
 
 end
