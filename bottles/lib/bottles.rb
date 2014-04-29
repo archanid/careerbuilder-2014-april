@@ -117,11 +117,14 @@ class Variant2 < Variant
 end
 
 class Container
+  attr_reader :n
 
   def initialize(n)
+    @n = n
   end
 
   def quantity
+    n.to_s
   end
 
   def name
