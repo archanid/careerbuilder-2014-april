@@ -70,13 +70,7 @@ class Variant
     @remaining_containers = container_for(n-1)
   end
 
-  def what_to_do
-    "Take #{pronoun} down and pass it around"
-  end
 
-  def pronoun
-    "one"
-  end
   
   private
 
