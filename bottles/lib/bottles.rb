@@ -19,7 +19,7 @@ class Verse
     @n = n
   end
 
-  def verse(num)
+  def verse(num=self.num)
     "#{quantity(num).capitalize} #{ewer(num)} of beer on the wall," + 
     " #{quantity(num)} #{ewer(num)} of beer.\n" + 
     "#{what_to_do(num)}," + 
