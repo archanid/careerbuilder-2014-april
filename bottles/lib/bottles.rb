@@ -58,3 +58,5 @@ end
 # now we can look at all the conditionals. do they look the same? yes.
 
 # new requirement: now we want to add six packs of beer!
+
+# what's wrong? we're not fully using single responsibility principle
