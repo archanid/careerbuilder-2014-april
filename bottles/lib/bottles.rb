@@ -10,6 +10,16 @@ class Bottles
   def verse(num)
     Verse.new(Variant.new(num)).to_s
   end
+
+  private
+
+  def kindofvariant(num)
+    if num == 0
+      Variant0.new(num)
+    else
+      Variant.new(num)
+    end
+  end
 end
 
 class Verse
