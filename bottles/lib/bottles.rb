@@ -18,11 +18,7 @@ end
 
 class Verse
   extend Forwardable
-  def_delegators :variant, :current_quantity,
-                            :current_container_name,
-                            :remaining_quantity,
-                            :remaining_container_name,
-                            :old_what_to_do
+
 
   def_delegator :current_containers, :quantity, :current_quantity
   def_delegator :current_containers, :name,     :current_container_name
