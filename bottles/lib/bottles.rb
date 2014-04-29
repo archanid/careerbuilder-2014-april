@@ -107,6 +107,10 @@ class Variant0 < Variant
   def remaining_quantity
     99.to_s
   end
+
+  def what_to_do
+    "Go to the store and buy some more"
+  end
 end
 
 # first strategy: when 2 and else are the closest to each other, so it would require the smallest difference change. make two changes, first the 2/num, then the bottle/s
