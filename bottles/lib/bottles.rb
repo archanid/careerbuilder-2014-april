@@ -14,10 +14,9 @@ class Bottles
   private
 
   def kindofvariant(n)
-    case n
-    when 0..2
+    begin
       Object.const_get("Variant#{n}")
-    else
+    rescue
       Variant
     end.new(n)
   end
