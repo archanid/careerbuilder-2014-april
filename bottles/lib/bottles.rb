@@ -164,6 +164,10 @@ class Container0 < Container
   def quantity
     "no more"
   end
+
+  def what_to_do
+    "Go to the store and buy some more"
+  end
 end
 
 
