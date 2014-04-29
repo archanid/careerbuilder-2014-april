@@ -59,16 +59,20 @@ class Variant
     case n
     when -1
       Object.const_get("ContainerNeg1")
-    when 0..99
-      Object.const_get("Container#{n}")
     else
-      Container
+      begin
+        Object.const_get("Container#{n}")
+      rescue
+        Container
+      end
     end.new(n)
   end
 
   def initialize(n)
     @n = n
+    @current_containers = container_for(n)
     @current_containers = Container.new(n)
+    @remaining_containers = container_for(n-1)
     @remaining_containers = Container.new(n-1)
   end
 
