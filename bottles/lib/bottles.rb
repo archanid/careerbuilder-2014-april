@@ -46,7 +46,7 @@ class Verse
     end.to_s
   end
 
-  def noun(n)
+  def noun(n=self.n)
     if n == 1
       "it"
     else
