@@ -10,12 +10,12 @@ class Bottles
   end
 
   def verse(n)
-    Verse.new(kindofvariant(n)).to_s
+    Verse.new(variant_for(n)).to_s
   end
 
   private
 
-  def kindofvariant(n)
+  def variant_for(n)
     begin
       Object.const_get("Variant#{n}")
     rescue
