@@ -57,8 +57,6 @@ class Variant
     case n
     when -1
       99
-    when 0
-      "no more"
     else
       n
     end.to_s
