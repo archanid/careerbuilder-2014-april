@@ -10,7 +10,7 @@ class Bottles
   end
 
   def verse(n)
-    Verse.new(variant_for(n)).to_s
+    Verse.new(n).to_s
   end
 
   private
@@ -47,8 +47,8 @@ class Verse
               :current_containers,
               :remaining_containers
 
-  def initialize(variant)
-    @variant              = variant
+  def initialize(n)
+    @variant              = variant_for(n)
     @n                    = variant.n
     @current_containers   = container_for(n)
     @remaining_containers = container_for(n-1)
