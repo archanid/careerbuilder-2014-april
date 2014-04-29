@@ -72,12 +72,7 @@ class Variant
   end
 
   def remaining_ewer
-    case n
-    when 2
-      "bottle"
-    else
-      "bottles"
-    end
+    "bottles"
   end
 end
 
