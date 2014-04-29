@@ -11,8 +11,6 @@ class Bottles
     case num
     when 0
       "No more bottles of beer on the wall, no more bottles of beer.\nGo to the store and buy some more, 99 bottles of beer on the wall.\n"
-    when 1
-      "#{num} #{ewer(num)} of beer on the wall, #{num} #{ewer(num)} of beer.\nTake #{noun(num)} down and pass it around, #{quantity(num-1)} #{ewer(num-1)} of beer on the wall.\n"
     else
       "#{num} #{ewer(num)} of beer on the wall, #{num} #{ewer(num)} of beer.\nTake #{noun(num)} down and pass it around, #{quantity(num-1)} #{ewer(num-1)} of beer on the wall.\n"
     end
