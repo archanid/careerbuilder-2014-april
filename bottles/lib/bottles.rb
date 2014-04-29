@@ -61,12 +61,7 @@ class Variant
   end
 
   def remaining_quantity
-    case n
-    when 1
-      "no more"
-    else
-      n - 1
-    end.to_s
+    (n - 1).to_s
   end
 
   def noun
