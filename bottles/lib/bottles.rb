@@ -19,7 +19,7 @@ class Verse
     @n = n
   end
 
-  def to_s(n=self.n)
+  def to_s
     "#{current_quantity(n).capitalize} #{current_ewer(n)} of beer on the wall," + 
     " #{current_quantity(n)} #{current_ewer(n)} of beer.\n" + 
     "#{what_to_do(n)}," + 
