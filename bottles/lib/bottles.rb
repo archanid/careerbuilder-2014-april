@@ -88,12 +88,12 @@ class Variant
     current_containers.quantity
   end
 
-  def remaining_quantity
-    remaining_containers.quantity
-  end
-
   def current_container_name
     current_containers.name
+  end
+
+  def remaining_quantity
+    remaining_containers.quantity
   end
 
   def remaining_container_name
