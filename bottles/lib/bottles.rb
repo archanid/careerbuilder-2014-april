@@ -60,12 +60,10 @@ class Variant
   end
 
   def current_quantity
-    n.to_s
     current_containers.quantity
   end
 
   def remaining_quantity
-    (n - 1).to_s
     remaining_containers.quantity
   end
 
