@@ -1,3 +1,5 @@
+require 'forwardable'
+
 class Bottles
   def song
     verses(99, 0)
@@ -23,6 +25,7 @@ class Bottles
 end
 
 class Verse
+  extend Forwardable
   attr_reader :variant
 
   def initialize(variant)
