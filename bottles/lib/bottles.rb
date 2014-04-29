@@ -30,14 +30,30 @@ class Verse
   end
 
   def to_s
-    "#{current_quantity.capitalize} #{vh.current_ewer} of beer on the wall," + 
-    " #{current_quantity} #{vh.current_ewer} of beer.\n" + 
+    "#{current_quantity.capitalize} #{current_ewer} of beer on the wall," + 
+    " #{current_quantity} #{current_ewer} of beer.\n" + 
     "#{vh.what_to_do}," + 
     " #{vh.remaining_quantity} #{vh.remaining_ewer} of beer on the wall.\n"
   end
 
   def current_quantity
     vh.current_quantity
+  end
+
+  def current_ewer
+    vh.current_ewer
+  end
+
+  def what_to_do
+    vh.what_to_do
+  end
+
+  def remaining_quantity
+    vh.remaining_quantity
+  end
+
+  def remaining_ewer
+    vh.remaining_ewer
   end
 end
 
