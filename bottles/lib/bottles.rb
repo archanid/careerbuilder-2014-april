@@ -26,6 +26,12 @@ end
 
 class Verse
   extend Forwardable
+  def_delegators :@variant, :current_quantity,
+                            :current_ewer,
+                            :remaining_quantity,
+                            :remaining_ewer,
+                            :what_to_do
+
   attr_reader :variant
 
   def initialize(variant)
