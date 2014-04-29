@@ -13,11 +13,9 @@ class Bottles
 end
 
 class Verse
-  attr_reader :n
   attr_reader :vh
 
   def initialize(n)
-    @n = n
     @vh = VerseHelper.new(n)
   end
 
