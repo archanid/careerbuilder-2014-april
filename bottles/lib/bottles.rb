@@ -84,14 +84,6 @@ class Variant
   def noun
     "one"
   end
-
-  def remaining_quantity
-    remaining_containers.quantity
-  end
-
-  def remaining_container_name
-    remaining_containers.name
-  end
 end
 
 class Variant0 < Variant
