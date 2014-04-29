@@ -113,9 +113,6 @@ class Variant1 < Variant
   end
 end
 
-class Variant2 < Variant
-end
-
 class Container
   attr_reader :n
 
