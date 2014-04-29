@@ -54,3 +54,5 @@ end
 # next: collapse them now that they're identical, then propagate changes. collapsing has higher priority. keep going.
 
 # at this point, the code is more complex than what we started with.
+
+# now we can look at all the conditionals. do they look the same? yes.
