@@ -69,12 +69,7 @@ class Variant
   end
 
   def current_ewer
-    case n
-    when 1
-      "bottle"
-    else
-      "bottles"
-    end
+    "bottles"
   end
 
   def remaining_ewer
@@ -108,6 +103,10 @@ class Variant1 < Variant
 
   def noun
     "it"
+  end
+
+  def current_ewer
+    "bottle"
   end
 end
 
