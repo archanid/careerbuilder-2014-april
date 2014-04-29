@@ -5,12 +5,12 @@ class Bottles
     verses(99, 0)
   end
 
-  def verses(s, e)
-    s.downto(e).map {|i| verse(i)}.join("\n")
+  def verses(first, last)
+    first.downto(last).map {|i| verse(i)}.join("\n")
   end
 
-  def verse(num)
-    Verse.new(kindofvariant(num)).to_s
+  def verse(n)
+    Verse.new(kindofvariant(n)).to_s
   end
 
   private
