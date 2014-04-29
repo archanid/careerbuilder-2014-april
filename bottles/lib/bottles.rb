@@ -107,7 +107,7 @@ class Variant0 < Variant
   end
 
   def remaining_quantity
-    99.to_s
+    99
   end
 end
 
