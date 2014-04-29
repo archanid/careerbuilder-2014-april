@@ -1,3 +1,5 @@
+require 'forwardable'
+
 class Bottles
   def song
     verses(99, 0)
