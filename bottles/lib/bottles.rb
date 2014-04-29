@@ -64,8 +64,6 @@ class Variant
 
   def remaining_quantity
     case n
-    when 0
-      99
     when 1
       "no more"
     else
