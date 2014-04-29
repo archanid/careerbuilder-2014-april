@@ -52,3 +52,5 @@ end
 # first strategy: when 2 and else are the closest to each other, so it would require the smallest difference change. make two changes, first the 2/num, then the bottle/s
 
 # next: collapse them now that they're identical, then propagate changes. collapsing has higher priority. keep going.
+
+# at this point, the code is more complex than what we started with.
