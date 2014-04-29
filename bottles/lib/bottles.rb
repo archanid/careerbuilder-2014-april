@@ -65,8 +65,8 @@ class Variant
   end
 
   def remaining_quantity
-    remaining_containers.quantity
     (n - 1).to_s
+    remaining_containers.quantity
   end
 
   def noun
