@@ -27,9 +27,9 @@ end
 class Verse
   extend Forwardable
   def_delegators :@variant, :current_quantity,
-                            :current_ewer,
+                            :current_container_name,
                             :remaining_quantity,
-                            :remaining_ewer,
+                            :remaining_container_name,
                             :what_to_do
 
   attr_reader :variant
@@ -39,14 +39,20 @@ class Verse
   end
 
   def to_s
-    "#{current_quantity.capitalize} #{current_ewer} of beer on the wall," + 
-    " #{current_quantity} #{current_ewer} of beer.\n" + 
+    "#{current_quantity.capitalize} #{current_container_name} of beer on the wall," + 
+    " #{current_quantity} #{current_container_name} of beer.\n" + 
     "#{what_to_do}," + 
-    " #{remaining_quantity} #{remaining_ewer} of beer on the wall.\n"
+    " #{remaining_quantity} #{remaining_container_name} of beer on the wall.\n"
   end
 end
 
 class Variant
+  extend Forwardable
+  def_delegators :@current_containers, :current_quantity,
+                                       :current_container_name
+  def_delegators :@remaining_containers, :remaining_quantity,
+                                         :remaining_container_name
+
   attr_reader :n, :current_containers, :remaining_containers
 
   def initialize(n)
@@ -71,11 +77,11 @@ class Variant
     "one"
   end
 
-  def current_ewer
+  def current_container_name
     current_containers.name
   end
 
-  def remaining_ewer
+  def remaining_container_name
     remaining_containers.name
   end
 end
@@ -103,13 +109,13 @@ class Variant1 < Variant
     "it"
   end
 
-  def current_ewer
+  def current_container_name
     "bottle"
   end
 end
 
 class Variant2 < Variant
-  def remaining_ewer
+  def remaining_container_name
     "bottle"
   end
 end
