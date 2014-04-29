@@ -112,9 +112,6 @@ class Variant1 < Variant
     "it"
   end
 
-  def current_container_name
-    "bottle"
-  end
 end
 
 class Variant2 < Variant
