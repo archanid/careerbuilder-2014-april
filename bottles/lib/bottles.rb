@@ -124,6 +124,10 @@ class Container
   def name
     "bottles"
   end
+  
+  def what_to_do
+    "Take #{pronoun} down and pass it around"
+  end
 
   def pronoun
     "one"
@@ -148,7 +152,7 @@ class Container1 < Container
   def name
     "bottle"
   end
-  
+
   def pronoun
     "it"
   end
