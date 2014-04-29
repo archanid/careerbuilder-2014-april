@@ -56,7 +56,8 @@ class Bottles
   end
 
   def current_ewer(n)
-    if n == 1
+    case n
+    when 1
       "bottle"
     else
       "bottles"
