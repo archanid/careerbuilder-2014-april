@@ -8,8 +8,8 @@ class Bottles
   end
 
   def verse(num)
-    "#{quantity(num).capitalize} #{current_ewer(num)} of beer on the wall," + 
-    " #{quantity(num)} #{current_ewer(num)} of beer.\n" + 
+    "#{current_quantity(num).capitalize} #{current_ewer(num)} of beer on the wall," + 
+    " #{current_quantity(num)} #{current_ewer(num)} of beer.\n" + 
     "#{what_to_do(num)}," + 
     " #{quantity(num-1)} #{remaining_ewer(num)} of beer on the wall.\n"
   end
@@ -25,7 +25,13 @@ class Bottles
   end
 
   def current_quantity(n)
-    n.to_s
+    if n == -1
+      99
+    elsif n == 0
+      "no more"
+    else
+      n
+    end.to_s
   end
 
   def remaining_quantity(n)
