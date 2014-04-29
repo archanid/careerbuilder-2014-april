@@ -24,6 +24,8 @@ class Bottles
   end
 end
 
+
+
 class Verse
   extend Forwardable
   def_delegators :@variant, :current_quantity,
@@ -45,6 +47,8 @@ class Verse
     " #{remaining_quantity} #{remaining_container_name} of beer on the wall.\n"
   end
 end
+
+
 
 class Variant
   extend Forwardable
@@ -88,17 +92,23 @@ class Variant
   end
 end
 
+
+
 class Variant0 < Variant
   def what_to_do
     "Go to the store and buy some more"
   end
 end
 
+
+
 class Variant1 < Variant
   def noun
     "it"
   end
 end
+
+
 
 class Container
   attr_reader :n
@@ -116,6 +126,8 @@ class Container
   end
 end
 
+
+
 class Container6 < Container
   def name
     "six pack"
@@ -126,17 +138,23 @@ class Container6 < Container
   end
 end
 
+
+
 class Container1 < Container
   def name
     "bottle"
   end
 end
 
+
+
 class Container0 < Container
   def quantity
     "no more"
   end
 end
+
+
 
 class ContainerNeg1 < Container
   def quantity
