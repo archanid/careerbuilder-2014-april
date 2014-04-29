@@ -25,12 +25,12 @@ end
 
 def quantity(n)
   if n == -1
-    99.to_s
+    99
   elsif n == 0
     "no more"
   else
-    n.to_s
-  end
+    n
+  end.to_s
 end
 
 def noun(n)
@@ -56,3 +56,5 @@ end
 # at this point, the code is more complex than what we started with.
 
 # now we can look at all the conditionals. do they look the same? yes.
+
+# new requirement: now we want to add six packs of beer!
