@@ -69,8 +69,6 @@ class Variant
     @current_containers   = container_for(n)
     @remaining_containers = container_for(n-1)
   end
-
-
   
   private
 
