@@ -17,7 +17,8 @@ class Bottles
   private
 
   def what_to_do(n)
-    if n == 0
+    case n
+    when 0
       "Go to the store and buy some more"
     else
       "Take #{noun(n)} down and pass it around"
