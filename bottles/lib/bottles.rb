@@ -56,12 +56,7 @@ class Variant
   end
 
   def current_quantity
-    case n
-    when -1
-      99
-    else
-      n
-    end.to_s
+    n.to_s
   end
 
   def remaining_quantity
