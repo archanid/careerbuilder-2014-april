@@ -25,9 +25,10 @@ class Bottles
   end
 
   def current_quantity(n)
-    if n == -1
+    case n
+    when -1
       99
-    elsif n == 0
+    when 0
       "no more"
     else
       n
@@ -35,9 +36,10 @@ class Bottles
   end
 
   def remaining_quantity(n)
-    if n == 0
+    case n
+    when 0
       99
-    elsif n == 1
+    when 1
       "no more"
     else
       n - 1
