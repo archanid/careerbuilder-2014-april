@@ -44,16 +44,6 @@ class Bottles
     end.to_s
   end
 
-  def quantity(n)
-    if n == -1
-      99
-    elsif n == 0
-      "no more"
-    else
-      n
-    end.to_s
-  end
-
   def noun(n)
     if n == 1
       "it"
