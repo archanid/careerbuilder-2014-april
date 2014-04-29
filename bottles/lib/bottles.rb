@@ -48,8 +48,8 @@ end
 
 class Variant
   extend Forwardable
-  def_delegators :@current_containers, :current_quantity,
-                                       :current_container_name
+  def_delegator :@current_containers, :current_quantity, :quantity
+  def_delegator :@current_containers, :current_container_name, :name
   def_delegators :@remaining_containers, :remaining_quantity,
                                          :remaining_container_name
 
