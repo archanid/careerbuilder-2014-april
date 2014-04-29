@@ -59,6 +59,15 @@ Take a bottle down and pass it around, 5 bottles of beer on the wall.
     assert_equal expected, bottles.verse(6)
   end
 
+  def test_verse_7
+    skip
+    expected = <<-VERSE
+7 bottles of beer on the wall, 7 bottles of beer.
+Take one down and pass it around, 1 six pack of beer on the wall.
+    VERSE
+    assert_equal expected, bottles.verse(7)
+  end
+
   def test_a_couple_verses
     expected = <<-VERSES
 99 bottles of beer on the wall, 99 bottles of beer.
