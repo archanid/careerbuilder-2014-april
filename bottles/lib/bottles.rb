@@ -19,8 +19,8 @@ class Bottles
       Variant0.new(n)
     when 1
       Variant1.new(n)
-    when -1
-      VariantNeg1.new(n)
+    # when -1
+    #   VariantNeg1.new(n)
     when 2
       Variant2.new(n)
     else
