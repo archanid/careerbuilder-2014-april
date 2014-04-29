@@ -57,8 +57,6 @@ class Bottles
   end
 
   def remaining_ewer(n)
-    #remaining_n = n - 1
-    #if remaining_n == 1
     if n == 2
       "bottle"
     else
