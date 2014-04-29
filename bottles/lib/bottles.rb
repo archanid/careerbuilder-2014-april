@@ -47,7 +47,8 @@ class Bottles
   end
 
   def noun(n)
-    if n == 1
+    case n
+    when 1
       "it"
     else
       "one"
