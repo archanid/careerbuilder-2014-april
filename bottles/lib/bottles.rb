@@ -129,6 +129,16 @@ class Container
   end
 end
 
+class Container6 < Container
+  def name
+    "six pack"
+  end
+
+  def quantity
+    1.to_s
+  end
+end
+
 class Container1 < Container
   def name
     "bottle"
