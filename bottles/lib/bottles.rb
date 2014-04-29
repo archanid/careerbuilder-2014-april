@@ -10,9 +10,9 @@ class Bottles
   def verse(num)
     case num
     when 0
-      "#{quantity(num).capitalize} #{ewer(num)} of beer on the wall, #{quantity(num)} #{ewer(num)} of beer.\nGo to the store and buy some more, #{quantity(num-1)} #{ewer(num-1)} of beer on the wall.\n"
+      "#{quantity(num).capitalize} #{ewer(num)} of beer on the wall, #{quantity(num)} #{ewer(num)} of beer.\n#{what_to_do(num)}, #{quantity(num-1)} #{ewer(num-1)} of beer on the wall.\n"
     else
-      "#{quantity(num).capitalize} #{ewer(num)} of beer on the wall, #{quantity(num)} #{ewer(num)} of beer.\nTake #{noun(num)} down and pass it around, #{quantity(num-1)} #{ewer(num-1)} of beer on the wall.\n"
+      "#{quantity(num).capitalize} #{ewer(num)} of beer on the wall, #{quantity(num)} #{ewer(num)} of beer.\n#{what_to_do(num)}, #{quantity(num-1)} #{ewer(num-1)} of beer on the wall.\n"
     end
   end
 end
@@ -21,7 +21,7 @@ def what_to_do(n)
   if n == 0
     "Go to the store and buy some more"
   else
-    "Take #{noun(num)} down and pass it around"
+    "Take #{noun(n)} down and pass it around"
   end
 end
 
