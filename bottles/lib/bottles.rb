@@ -56,9 +56,12 @@ class Variant
   attr_reader :n, :current_containers, :remaining_containers
 
   def container_for(n)
-    begin
+    case n
+    when -1
+      Object.const_get("ContainerNeg1")
+    when 0..99
       Object.const_get("Container#{n}")
-    rescue
+    else
       Container
     end.new(n)
   end
