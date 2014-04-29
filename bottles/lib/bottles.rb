@@ -13,11 +13,14 @@ class Bottles
 
   private
 
-  def kindofvariant(num)
-    if num == 0
-      Variant0.new(num)
+  def kindofvariant(n)
+    case n
+    when 0
+      Variant0.new(n)
+    when 1
+      Variant1.new(n)
     else
-      Variant.new(num)
+      Variant.new(n)
     end
   end
 end
