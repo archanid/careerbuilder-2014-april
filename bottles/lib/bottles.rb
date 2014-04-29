@@ -20,10 +20,10 @@ class Verse
   end
 
   def to_s
-    "#{current_quantity.capitalize} #{current_ewer(n)} of beer on the wall," + 
-    " #{current_quantity} #{current_ewer(n)} of beer.\n" + 
+    "#{current_quantity.capitalize} #{current_ewer} of beer on the wall," + 
+    " #{current_quantity} #{current_ewer} of beer.\n" + 
     "#{what_to_do}," + 
-    " #{remaining_quantity} #{remaining_ewer(n)} of beer on the wall.\n"
+    " #{remaining_quantity} #{remaining_ewer} of beer on the wall.\n"
   end
 
   private
@@ -68,7 +68,7 @@ class Verse
     end
   end
 
-  def current_ewer(n)
+  def current_ewer
     case n
     when 1
       "bottle"
@@ -77,7 +77,7 @@ class Verse
     end
   end
 
-  def remaining_ewer(n)
+  def remaining_ewer
     case n
     when 2
       "bottle"
