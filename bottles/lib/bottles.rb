@@ -80,16 +80,16 @@ class Variant
     "Take #{noun} down and pass it around"
   end
 
+  def noun
+    "one"
+  end
+  
   def current_quantity
     current_containers.quantity
   end
 
   def remaining_quantity
     remaining_containers.quantity
-  end
-
-  def noun
-    "one"
   end
 
   def current_container_name
