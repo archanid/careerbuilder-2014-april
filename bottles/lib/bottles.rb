@@ -34,13 +34,24 @@ class Verse
                             :remaining_container_name,
                             :old_what_to_do
 
-  # def_delegator :current_containers, :quantity, :current_quantity
+  def_delegator :current_containers, :quantity, :current_quantity
+  def_delegator :current_containers, :name,     :current_container_name
 
+  def_delegator :remaining_containers, :quantity, :remaining_quantity
+  def_delegator :remaining_containers, :name,     :remaining_container_name
 
-  attr_reader :variant
+  def_delegator :current_containers, :what_to_do, :old_what_to_do
+
+  attr_reader :variant,
+              :n,
+              :current_containers,
+              :remaining_containers
 
   def initialize(variant)
-    @variant = variant
+    @variant              = variant
+    @n                    = variant.n
+    @current_containers   = container_for(n)
+    @remaining_containers = container_for(n-1)
   end
 
   def to_s
@@ -48,6 +59,21 @@ class Verse
     " #{current_quantity} #{current_container_name} of beer.\n" + 
     "#{old_what_to_do}," + 
     " #{remaining_quantity} #{remaining_container_name} of beer on the wall.\n"
+  end
+
+  private
+
+  def container_for(n)
+    case n
+    when -1
+      Object.const_get("ContainerNeg1")
+    else
+      begin
+        Object.const_get("Container#{n}")
+      rescue
+        Container
+      end
+    end.new(n)
   end
 end
 
