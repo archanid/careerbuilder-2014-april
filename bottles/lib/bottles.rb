@@ -134,8 +134,14 @@ class Container
   def name
     "bottles"
   end
-
 end
+
+class Container0 < Container
+  def quantity
+    "no more"
+  end
+end
+
 
 # first strategy: when 2 and else are the closest to each other, so it would require the smallest difference change. make two changes, first the 2/num, then the bottle/s
 
