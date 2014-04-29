@@ -58,10 +58,12 @@ class Verse
 end
 
 class Variant
-  attr_reader :n
+  attr_reader :n, :current_containers, :remaining_containers
 
   def initialize(n)
     @n = n
+    @current_containers = Container.new(n)
+    @remaining_containers = Container.new(n-1)
   end
 
   def what_to_do
@@ -122,6 +124,14 @@ class Variant2 < Variant
     "bottle"
   end
 end
+
+class Container
+
+  def initialize(n)
+  end
+
+end
+
 # first strategy: when 2 and else are the closest to each other, so it would require the smallest difference change. make two changes, first the 2/num, then the bottle/s
 
 # next: collapse them now that they're identical, then propagate changes. collapsing has higher priority. keep going.
