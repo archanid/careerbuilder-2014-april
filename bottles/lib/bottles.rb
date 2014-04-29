@@ -8,7 +8,7 @@ class Bottles
   end
 
   def verse(num)
-    Verse.new(num).to_s(num)
+    Verse.new(num).to_s
   end
 end
 
