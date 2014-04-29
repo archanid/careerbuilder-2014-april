@@ -32,7 +32,10 @@ class Verse
                             :current_container_name,
                             :remaining_quantity,
                             :remaining_container_name,
-                            :what_to_do
+                            :old_what_to_do
+
+  # def_delegator :current_containers, :quantity, :current_quantity
+
 
   attr_reader :variant
 
@@ -43,7 +46,7 @@ class Verse
   def to_s
     "#{current_quantity.capitalize} #{current_container_name} of beer on the wall," + 
     " #{current_quantity} #{current_container_name} of beer.\n" + 
-    "#{what_to_do}," + 
+    "#{old_what_to_do}," + 
     " #{remaining_quantity} #{remaining_container_name} of beer on the wall.\n"
   end
 end
@@ -58,7 +61,7 @@ class Variant
   def_delegator :remaining_containers, :quantity, :remaining_quantity
   def_delegator :remaining_containers, :name,     :remaining_container_name
 
-  def_delegator :current_containers, :what_to_do
+  def_delegator :current_containers, :what_to_do, :old_what_to_do
 
   attr_reader :n, 
               :current_containers, 
