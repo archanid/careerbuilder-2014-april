@@ -8,12 +8,7 @@ class Bottles
   end
 
   def verse(num)
-    case num
-    when 0
-      "#{quantity(num).capitalize} #{ewer(num)} of beer on the wall, #{quantity(num)} #{ewer(num)} of beer.\n#{what_to_do(num)}, #{quantity(num-1)} #{ewer(num-1)} of beer on the wall.\n"
-    else
-      "#{quantity(num).capitalize} #{ewer(num)} of beer on the wall, #{quantity(num)} #{ewer(num)} of beer.\n#{what_to_do(num)}, #{quantity(num-1)} #{ewer(num-1)} of beer on the wall.\n"
-    end
+    "#{quantity(num).capitalize} #{ewer(num)} of beer on the wall, #{quantity(num)} #{ewer(num)} of beer.\n#{what_to_do(num)}, #{quantity(num-1)} #{ewer(num-1)} of beer on the wall.\n"
   end
 end
 
