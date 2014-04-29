@@ -61,59 +61,6 @@ end
 
 
 
-class Variant
-  extend Forwardable
-  def_delegator :current_containers, :quantity, :current_quantity
-  def_delegator :current_containers, :name,     :current_container_name
-
-  def_delegator :remaining_containers, :quantity, :remaining_quantity
-  def_delegator :remaining_containers, :name,     :remaining_container_name
-
-  def_delegator :current_containers, :what_to_do, :old_what_to_do
-
-  attr_reader :n, 
-              :current_containers, 
-              :remaining_containers
-
-  def initialize(n)
-    @n                    = n
-    @current_containers   = container_for(n)
-    @remaining_containers = container_for(n-1)
-  end
-  
-  private
-
-  def container_for(n)
-    case n
-    when -1
-      Object.const_get("ContainerNeg1")
-    else
-      begin
-        Object.const_get("Container#{n}")
-      rescue
-        Container
-      end
-    end.new(n)
-  end
-end
-
-
-
-class Variant0 < Variant
-  def what_to_do
-    "Go to the store and buy some more"
-  end
-end
-
-
-
-class Variant1 < Variant
-  def pronoun
-    "it"
-  end
-end
-
-
 
 class Container
   attr_reader :n
