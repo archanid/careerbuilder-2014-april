@@ -70,10 +70,10 @@ class Variant
 
   def initialize(n)
     @n = n
-    @current_containers = container_for(n)
     @current_containers = Container.new(n)
-    @remaining_containers = container_for(n-1)
+    @current_containers = container_for(n)
     @remaining_containers = Container.new(n-1)
+    @remaining_containers = container_for(n-1)
   end
 
   def what_to_do
