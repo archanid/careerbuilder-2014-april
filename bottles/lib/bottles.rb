@@ -52,7 +52,12 @@ class Bottles
 end
 
 class Verse
+  attr_reader :n
 
+  def initialize(n)
+    @n = n
+  end
+  
   def verse(num)
     "#{quantity(num).capitalize} #{ewer(num)} of beer on the wall," + 
     " #{quantity(num)} #{ewer(num)} of beer.\n" + 
