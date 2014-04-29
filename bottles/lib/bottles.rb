@@ -21,8 +21,8 @@ class Bottles
       Variant1.new(n)
     when -1
       VariantNeg1.new(n)
-    # when 2
-    #   Variant2.new(n)
+    when 2
+      Variant2.new(n)
     else
       Variant.new(n)
     end
@@ -115,6 +115,11 @@ class VariantNeg1 < Variant
   end
 end
 
+class Variant2 < Variant
+  def remaining_ewer
+    "bottle"
+  end
+end
 # first strategy: when 2 and else are the closest to each other, so it would require the smallest difference change. make two changes, first the 2/num, then the bottle/s
 
 # next: collapse them now that they're identical, then propagate changes. collapsing has higher priority. keep going.
