@@ -20,8 +20,8 @@ class Verse
   end
 
   def verse
-    "#{quantity(n).capitalize} #{ewer(n)} of beer on the wall," + 
-    " #{quantity(n)} #{ewer(n)} of beer.\n" + 
+    "#{quantity.capitalize} #{ewer(n)} of beer on the wall," + 
+    " #{quantity} #{ewer(n)} of beer.\n" + 
     "#{what_to_do}," + 
     " #{quantity(n-1)} #{ewer(n-1)} of beer on the wall.\n"
   end
