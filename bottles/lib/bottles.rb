@@ -83,7 +83,7 @@ class Variant
   def noun
     "one"
   end
-  
+
   def current_quantity
     current_containers.quantity
   end
@@ -136,6 +136,12 @@ class Container
 
   def name
     "bottles"
+  end
+end
+
+class Container1 < Container
+  def name
+    "bottle"
   end
 end
 
