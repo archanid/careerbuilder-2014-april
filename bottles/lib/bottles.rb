@@ -55,6 +55,14 @@ class Variant
 
   attr_reader :n, :current_containers, :remaining_containers
 
+  def container_for(n)
+    begin
+      Object.const_get("Container#{n}")
+    rescue
+      Container
+    end.new(n)
+  end
+
   def initialize(n)
     @n = n
     @current_containers = Container.new(n)
