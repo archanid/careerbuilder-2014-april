@@ -69,10 +69,10 @@ class Variant
   end
 
   def what_to_do
-    "Take #{noun} down and pass it around"
+    "Take #{pronoun} down and pass it around"
   end
 
-  def noun
+  def pronoun
     "one"
   end
   
@@ -103,7 +103,7 @@ end
 
 
 class Variant1 < Variant
-  def noun
+  def pronoun
     "it"
   end
 end
@@ -123,6 +123,10 @@ class Container
 
   def name
     "bottles"
+  end
+
+  def pronoun
+    "one"
   end
 end
 
