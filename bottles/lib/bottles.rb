@@ -33,7 +33,6 @@ class Verse
   def_delegator :current_containers, :what_to_do, :old_what_to_do
 
   attr_reader :variant,
-              :n,
               :current_containers,
               :remaining_containers
 
