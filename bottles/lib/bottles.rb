@@ -45,25 +45,6 @@ class Verse
     " #{remaining_quantity} #{remaining_ewer} of beer on the wall.\n"
   end
 
-  def current_quantity
-    variant.current_quantity
-  end
-
-  def current_ewer
-    variant.current_ewer
-  end
-
-  def what_to_do
-    variant.what_to_do
-  end
-
-  def remaining_quantity
-    variant.remaining_quantity
-  end
-
-  def remaining_ewer
-    variant.remaining_ewer
-  end
 end
 
 class Variant
