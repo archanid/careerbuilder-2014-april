@@ -8,7 +8,10 @@ class Bottles
   end
 
   def verse(num)
-    "#{quantity(num).capitalize} #{ewer(num)} of beer on the wall, #{quantity(num)} #{ewer(num)} of beer.\n#{what_to_do(num)}, #{quantity(num-1)} #{ewer(num-1)} of beer on the wall.\n"
+    "#{quantity(num).capitalize} #{ewer(num)} of beer on the wall," + 
+    " #{quantity(num)} #{ewer(num)} of beer.\n" + 
+    "#{what_to_do(num)}," + 
+    " #{quantity(num-1)} #{ewer(num-1)} of beer on the wall.\n"
   end
 end
 
