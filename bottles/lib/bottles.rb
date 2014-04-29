@@ -148,6 +148,10 @@ class Container1 < Container
   def name
     "bottle"
   end
+  
+  def pronoun
+    "it"
+  end
 end
 
 
