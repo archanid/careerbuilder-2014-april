@@ -84,11 +84,11 @@ class Verse
     @n = n
   end
 
-  def verse(num)
-    "#{current_quantity(num).capitalize} #{current_ewer(num)} of beer on the wall," + 
-    " #{current_quantity(num)} #{current_ewer(num)} of beer.\n" + 
-    "#{what_to_do(num)}," + 
-    " #{remaining_quantity(num)} #{remaining_ewer(num)} of beer on the wall.\n"
+  def verse(n)
+    "#{current_quantity(n).capitalize} #{current_ewer(n)} of beer on the wall," + 
+    " #{current_quantity(n)} #{current_ewer(n)} of beer.\n" + 
+    "#{what_to_do(n)}," + 
+    " #{remaining_quantity(n)} #{remaining_ewer(n)} of beer on the wall.\n"
   end
 
   private
