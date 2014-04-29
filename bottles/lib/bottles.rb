@@ -25,6 +25,7 @@ class Bottles
   end
 
   def current_quantity(n)
+    n.to_s
   end
 
   def remaining_quantity(n)
