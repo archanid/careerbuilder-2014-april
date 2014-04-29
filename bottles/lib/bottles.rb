@@ -10,42 +10,6 @@ class Bottles
   def verse(num)
     Verse.new(num).verse(num)
   end
-
-  private
-
-  def what_to_do(n)
-    if n == 0
-      "Go to the store and buy some more"
-    else
-      "Take #{noun(n)} down and pass it around"
-    end
-  end
-
-  def quantity(n)
-    if n == -1
-      99
-    elsif n == 0
-      "no more"
-    else
-      n
-    end.to_s
-  end
-
-  def noun(n)
-    if n == 1
-      "it"
-    else
-      "one"
-    end
-  end
-
-  def ewer(n)
-    if n == 1
-      "bottle"
-    else
-      "bottles"
-    end
-  end
 end
 
 class Verse
