@@ -32,7 +32,7 @@ class Verse
     if n == 0
       "Go to the store and buy some more"
     else
-      "Take #{noun(n)} down and pass it around"
+      "Take #{noun} down and pass it around"
     end
   end
 
