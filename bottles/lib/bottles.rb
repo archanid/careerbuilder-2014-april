@@ -11,7 +11,7 @@ class Bottles
     "#{current_quantity(num).capitalize} #{current_ewer(num)} of beer on the wall," + 
     " #{current_quantity(num)} #{current_ewer(num)} of beer.\n" + 
     "#{what_to_do(num)}," + 
-    " #{quantity(num-1)} #{remaining_ewer(num)} of beer on the wall.\n"
+    " #{remaining_quantity(num-1)} #{remaining_ewer(num)} of beer on the wall.\n"
   end
 
   private
@@ -35,6 +35,13 @@ class Bottles
   end
 
   def remaining_quantity(n)
+    if n == -1
+      99
+    elsif n == 0
+      "no more"
+    else
+      n
+    end.to_s
   end
 
   def quantity(n)
