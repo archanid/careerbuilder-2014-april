@@ -65,7 +65,8 @@ class Bottles
   end
 
   def remaining_ewer(n)
-    if n == 2
+    case n
+    when 2
       "bottle"
     else
       "bottles"
