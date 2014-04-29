@@ -19,7 +19,6 @@ end
 class Verse
   extend Forwardable
 
-
   def_delegator :current_containers, :quantity, :current_quantity
   def_delegator :current_containers, :name,     :current_container_name
 
@@ -58,7 +57,6 @@ class Verse
     end.new(n)
   end
 end
-
 
 
 
