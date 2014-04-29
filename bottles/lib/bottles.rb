@@ -58,19 +58,6 @@ class Variant
               :current_containers, 
               :remaining_containers
 
-  def container_for(n)
-    case n
-    when -1
-      Object.const_get("ContainerNeg1")
-    else
-      begin
-        Object.const_get("Container#{n}")
-      rescue
-        Container
-      end
-    end.new(n)
-  end
-
   def initialize(n)
     @n                    = n
     @current_containers   = container_for(n)
@@ -83,6 +70,21 @@ class Variant
 
   def noun
     "one"
+  end
+  
+  private
+
+  def container_for(n)
+    case n
+    when -1
+      Object.const_get("ContainerNeg1")
+    else
+      begin
+        Object.const_get("Container#{n}")
+      rescue
+        Container
+      end
+    end.new(n)
   end
 end
 
