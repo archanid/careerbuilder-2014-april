@@ -18,7 +18,9 @@ class Bottles
 end
 
 def quantity(n)
-  if n == 0
+  if n == -1
+    99.to_s
+  elsif n == 0
     "no more"
   else
     n.to_s
