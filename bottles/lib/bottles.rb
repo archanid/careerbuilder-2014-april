@@ -65,12 +65,7 @@ class Variant
   end
 
   def noun
-    case n
-    when 1
-      "it"
-    else
-      "one"
-    end
+    "one"
   end
 
   def current_ewer
