@@ -63,6 +63,14 @@ class Verse
 
   private
 
+  def variant_for(n)
+    begin
+      Object.const_get("Variant#{n}")
+    rescue
+      Variant
+    end.new(n)
+  end
+
   def container_for(n)
     case n
     when -1
