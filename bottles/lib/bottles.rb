@@ -54,7 +54,7 @@ class Verse
     end
   end
 
-  def ewer(n)
+  def ewer(n=self.n)
     if n == 1
       "bottle"
     else
