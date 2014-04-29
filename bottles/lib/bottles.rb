@@ -18,14 +18,14 @@ class Verse
 
   def initialize(n)
     @n = n
-    @vh = VerseHelper.new
+    @vh = VerseHelper.new(n)
   end
 
   def to_s
-    "#{current_quantity.capitalize} #{current_ewer} of beer on the wall," + 
-    " #{current_quantity} #{current_ewer} of beer.\n" + 
-    "#{what_to_do}," + 
-    " #{remaining_quantity} #{remaining_ewer} of beer on the wall.\n"
+    "#{vh.current_quantity.capitalize} #{vh.current_ewer} of beer on the wall," + 
+    " #{vh.current_quantity} #{vh.current_ewer} of beer.\n" + 
+    "#{vh.what_to_do}," + 
+    " #{vh.remaining_quantity} #{vh.remaining_ewer} of beer on the wall.\n"
   end
 
   private
@@ -90,6 +90,12 @@ class Verse
 end
 
 class VerseHelper
+  attr_reader :n
+
+  def initialize(n)
+    @n = n
+  end
+
   def what_to_do
     case n
     when 0
