@@ -37,7 +37,7 @@ class Verse
     end
   end
 
-  def current_quantity(n)
+  def current_quantity(n=self.n)
     case n
     when -1
       99
