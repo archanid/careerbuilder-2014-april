@@ -45,12 +45,7 @@ class Variant
   end
 
   def what_to_do
-    case n
-    when 0
-      "Go to the store and buy some more"
-    else
-      "Take #{noun} down and pass it around"
-    end
+    "Take #{noun} down and pass it around"
   end
 
   def current_quantity
