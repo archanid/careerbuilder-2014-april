@@ -111,7 +111,6 @@ class Variant1 < Variant
   def noun
     "it"
   end
-
 end
 
 class Variant2 < Variant
