@@ -14,9 +14,11 @@ end
 
 class Verse
   attr_reader :n
+  attr_reader :vh
 
   def initialize(n)
     @n = n
+    @vh = VerseHelper.new
   end
 
   def to_s
@@ -28,6 +30,66 @@ class Verse
 
   private
 
+  def what_to_do
+    case n
+    when 0
+      "Go to the store and buy some more"
+    else
+      "Take #{noun} down and pass it around"
+    end
+  end
+
+  def current_quantity
+    case n
+    when -1
+      99
+    when 0
+      "no more"
+    else
+      n
+    end.to_s
+  end
+
+  def remaining_quantity
+    case n
+    when 0
+      99
+    when 1
+      "no more"
+    else
+      n - 1
+    end.to_s
+  end
+
+  def noun
+    case n
+    when 1
+      "it"
+    else
+      "one"
+    end
+  end
+
+  def current_ewer
+    case n
+    when 1
+      "bottle"
+    else
+      "bottles"
+    end
+  end
+
+  def remaining_ewer
+    case n
+    when 2
+      "bottle"
+    else
+      "bottles"
+    end
+  end
+end
+
+class VerseHelper
   def what_to_do
     case n
     when 0
@@ -104,3 +166,5 @@ end
 # Now extract class again.
 
 # That worked. Now we can start to implement the new requirement.
+
+# Make it open close to six pack by following SRP. Convert conditionals to polymorphism. Keep on doing SRP.
