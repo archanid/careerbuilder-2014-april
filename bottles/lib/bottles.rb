@@ -23,7 +23,7 @@ class Verse
     "#{current_quantity.capitalize} #{current_ewer(n)} of beer on the wall," + 
     " #{current_quantity} #{current_ewer(n)} of beer.\n" + 
     "#{what_to_do}," + 
-    " #{remaining_quantity(n)} #{remaining_ewer(n)} of beer on the wall.\n"
+    " #{remaining_quantity} #{remaining_ewer(n)} of beer on the wall.\n"
   end
 
   private
