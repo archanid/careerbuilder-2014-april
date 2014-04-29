@@ -12,7 +12,7 @@ class Bottles
     when 0
       "No more bottles of beer on the wall, no more bottles of beer.\nGo to the store and buy some more, 99 bottles of beer on the wall.\n"
     when 1
-      "#{num} #{ewer(num)} of beer on the wall, #{num} #{ewer(num)} of beer.\nTake #{noun(num)} down and pass it around, no more bottles of beer on the wall.\n"
+      "#{num} #{ewer(num)} of beer on the wall, #{num} #{ewer(num)} of beer.\nTake #{noun(num)} down and pass it around, #{quantity(num-1)} bottles of beer on the wall.\n"
     else
       "#{num} #{ewer(num)} of beer on the wall, #{num} #{ewer(num)} of beer.\nTake #{noun(num)} down and pass it around, #{num-1} #{ewer(num-1)} of beer on the wall.\n"
     end
@@ -20,7 +20,7 @@ class Bottles
 end
 
 def quantity(n)
-  if n == 
+  if n == 0
     "no more"
   else
     n.to_s
