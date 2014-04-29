@@ -37,7 +37,7 @@ class Verse
 
   def to_s
     "#{current_containers.quantity.capitalize} #{current_containers.name} of beer on the wall," + 
-    " #{current_quantity} #{current_container_name} of beer.\n" + 
+    " #{current_containers.quantity} #{current_container_name} of beer.\n" + 
     "#{old_what_to_do}," + 
     " #{remaining_quantity} #{remaining_container_name} of beer on the wall.\n"
   end
