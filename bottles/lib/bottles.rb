@@ -8,7 +8,6 @@ class Bottles
   end
 
   def verse(num)
-    Verse.new(Variant.new(num)).to_s
     Verse.new(kindofvariant(num)).to_s
   end
 
