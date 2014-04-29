@@ -100,17 +100,12 @@ class Variant
 end
 
 class Variant0 < Variant
-
   def what_to_do
     "Go to the store and buy some more"
   end
 end
 
 class Variant1 < Variant
-  def remaining_quantity
-    "no more"
-  end
-
   def noun
     "it"
   end
