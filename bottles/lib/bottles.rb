@@ -8,15 +8,15 @@ class Bottles
   end
 
   def verse(num)
-    Verse.new(num).to_s
+    Verse.new(Variant.new(num)).to_s
   end
 end
 
 class Verse
   attr_reader :vh
 
-  def initialize(n)
-    @vh = VerseHelper.new(n)
+  def initialize(vh)
+    @vh = vh
   end
 
   def to_s
@@ -27,7 +27,7 @@ class Verse
   end
 end
 
-class VerseHelper
+class Variant
   attr_reader :n
 
   def initialize(n)
@@ -112,3 +112,6 @@ end
 # That worked. Now we can start to implement the new requirement.
 
 # Make it open close to six pack by following SRP. Convert conditionals to polymorphism. Keep on doing SRP.
+
+# Composition: Verse is composed of Variants
+# Inheritance: Create Variant0
