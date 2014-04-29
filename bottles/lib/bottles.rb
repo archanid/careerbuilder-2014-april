@@ -24,6 +24,12 @@ class Bottles
     end
   end
 
+  def current_quantity(n)
+  end
+
+  def remaining_quantity(n)
+  end
+
   def quantity(n)
     if n == -1
       99
@@ -40,6 +46,12 @@ class Bottles
     else
       "one"
     end
+  end
+
+  def current_ewer(n)
+  end
+
+  def remaining_ewer(n)
   end
 
   def ewer(n)
