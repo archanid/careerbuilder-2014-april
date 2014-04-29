@@ -17,6 +17,14 @@ class Bottles
   end
 end
 
+def what_to_do(n)
+  if n == 0
+    "Go to the store and buy some more"
+  else
+    "Take #{noun(num)} down and pass it around"
+  end
+end
+
 def quantity(n)
   if n == -1
     99.to_s
