@@ -35,7 +35,7 @@ class Bottles
   end
 
   def remaining_quantity(n)
-    n -= 1
+    n = n - 1
     if n == -1
       99
     elsif n == 0
