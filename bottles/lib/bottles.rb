@@ -20,8 +20,10 @@ class Bottles
       Object.const_get("Variant#{n}").new(n)
     when 1
       Variant1.new(n)
+      Object.const_get("Variant#{n}").new(n)
     when 2
       Variant2.new(n)
+      Object.const_get("Variant#{n}").new(n)
     else
       Variant.new(n)
     end
