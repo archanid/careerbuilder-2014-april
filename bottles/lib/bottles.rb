@@ -13,39 +13,41 @@ class Bottles
     "#{what_to_do(num)}," + 
     " #{quantity(num-1)} #{ewer(num-1)} of beer on the wall.\n"
   end
-end
 
-def what_to_do(n)
-  if n == 0
-    "Go to the store and buy some more"
-  else
-    "Take #{noun(n)} down and pass it around"
+  def what_to_do(n)
+    if n == 0
+      "Go to the store and buy some more"
+    else
+      "Take #{noun(n)} down and pass it around"
+    end
   end
-end
 
-def quantity(n)
-  if n == -1
-    99
-  elsif n == 0
-    "no more"
-  else
-    n
-  end.to_s
-end
+  private
 
-def noun(n)
-  if n == 1
-    "it"
-  else
-    "one"
+  def quantity(n)
+    if n == -1
+      99
+    elsif n == 0
+      "no more"
+    else
+      n
+    end.to_s
   end
-end
 
-def ewer(n)
-  if n == 1
-    "bottle"
-  else
-    "bottles"
+  def noun(n)
+    if n == 1
+      "it"
+    else
+      "one"
+    end
+  end
+
+  def ewer(n)
+    if n == 1
+      "bottle"
+    else
+      "bottles"
+    end
   end
 end
 
