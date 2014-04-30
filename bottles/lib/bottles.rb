@@ -63,12 +63,7 @@ class BottlishNumber
   end
 
   def action
-    case bottle_number
-    when 0
-      "Go to the store and buy some more"
-    else
-      "Take #{pronoun} down and pass it around"
-    end
+    "Take #{pronoun} down and pass it around"
   end
 
   def pronoun
@@ -88,5 +83,15 @@ class BottlishNumberZero < BottlishNumber
 
   def quantity
     "no more"
+  end
+end
+
+class BottlishNumberOne < BottlishNumber
+  def name
+    'bottle'
+  end
+
+  def pronoun
+    'it'
   end
 end
