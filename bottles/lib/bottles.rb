@@ -14,7 +14,7 @@ class Bottles
 end
 
 class SuitableVariant
-  def self.bottle_number_for(num)
+  def self.bottlish_number_for(num)
     begin
       Object.const_get("BottlishNumber#{num}")
     rescue
@@ -26,7 +26,7 @@ end
 class Verse
   extend Forwardable
   delegate [:quantity, :action, :name, :following] => :bottle_number
-  attr_reader :num, :bottle_number, :ending_bottle_number
+  attr_reader :num, :bottle_number
 
   def initialize(num)
     @bottle_number = num.to_bottlishnumber
@@ -41,10 +41,12 @@ class Verse
 end
 
 class BottlishNumber
-  attr_reader :bottle_number
+  extend Forwardable
+  delegate [:to_beersongbottlishnumber] => :number
+  attr_reader :number
 
   def initialize(number)
-    @bottle_number = number
+    @number = number
   end
 
   def to_s
@@ -52,11 +54,11 @@ class BottlishNumber
   end
 
   def quantity
-    bottle_number.to_s
+    number.to_s
   end
 
   def following
-    bottle_number.pred.to_bottlishnumber
+    number.pred.to_bottlishnumber
   end
 
   def name
@@ -102,7 +104,7 @@ class BottlishNumber6 < BottlishNumber
   end
 
   def quantity
-    (bottle_number / 6).to_s
+    (number / 6).to_s
   end
 end
 
@@ -125,10 +127,10 @@ class Fixnum
 end
 
 class BeerSongBottlishNumber
-  attr_accessor :bottle_number
+  attr_accessor :bottlish_number
   
   def initialize(bottlish_number)
-    @bottle_number = number
+
   end
 
   def to_s
