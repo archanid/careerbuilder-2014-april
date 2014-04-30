@@ -84,7 +84,7 @@ end
 
 class BeerSongBottleNumber
   extend Forwardable
-  delegate [:quantity, :name] => :bottlish_number
+  delegate [:quantity, :name, :succ] => :bottlish_number
   attr_reader :bottlish_number
 
   def initialize(bottlish_number)
@@ -96,7 +96,7 @@ class BeerSongBottleNumber
   end
 
   def succ
-    bottlish_number.succ.to_beersongbotnum # Law of Demeter violation
+    bottlish_number.succ.to_beersongbotnum
   end
 
   def action
