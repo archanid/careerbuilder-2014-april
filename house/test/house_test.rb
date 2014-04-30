@@ -98,8 +98,8 @@ This is the horse and the hound and the horn that belonged to the farmer sowing 
   end
 
   def test_random_line_end
-    expected_end = "the house that Jack built.\n"
-    assert tale.random.end_with?(expected_end)
+    expected = "the house that Jack built.\n"
+    assert_equal expected, tale.random.split(//).last(expected.length).join
   end
 
   def test_random_line_start
