@@ -114,6 +114,14 @@ class Fixnum
       BottlishNumber
     end.new(self)
   end
+
+  def to_beersongbottlishnumber
+    begin
+      Object.const_get("BeerSongBottlishNumber#{self.to_bottlishnumber}")
+    rescue
+      BeerSongBottlishNumber
+    end.new(self.to_bottlishnumber)
+  end
 end
 
 class BeerSongBottlishNumber
