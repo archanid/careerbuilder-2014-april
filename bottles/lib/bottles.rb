@@ -21,10 +21,10 @@ class Verse
   end
 
   def verse(num)
-    "#{quantity.capitalize} #{container} of beer on the wall, " +
-    "#{quantity} #{container} of beer.\n" +
+    "#{quantity.capitalize} #{name} of beer on the wall, " +
+    "#{quantity} #{name} of beer.\n" +
     "#{action}, " +
-    "#{quantity(num-1)} #{container(num-1)} of beer on the wall.\n"
+    "#{quantity(num-1)} #{name(num-1)} of beer on the wall.\n"
   end
 
   private
@@ -40,7 +40,7 @@ class Verse
     end
   end
 
-  def container(bottle_number=self.num)
+  def name(bottle_number=self.num)
     case bottle_number
     when 1
       'bottle'
@@ -69,7 +69,13 @@ class Verse
 end
 
 class BottlishNumber
-    def quantity(bottle_number=self.num)
+  attr_reader :bottle_number
+
+  def initialize(number)
+    @bottle_number = number
+  end
+
+  def quantity(bottle_number=self.num)
     case bottle_number
     when -1
       99.to_s
@@ -80,7 +86,7 @@ class BottlishNumber
     end
   end
 
-  def container(bottle_number=self.num)
+  def name(bottle_number=self.num)
     case bottle_number
     when 1
       'bottle'
