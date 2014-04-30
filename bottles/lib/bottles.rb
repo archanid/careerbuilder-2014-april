@@ -26,46 +26,6 @@ class Verse
     "#{starting_bottle_number.action}, " +
     "#{ending_bottle_number.quantity} #{ending_bottle_number.name} of beer on the wall.\n"
   end
-
-  private
-
-  def quantity(bottle_number=self.num)
-    case bottle_number
-    when -1
-      99.to_s
-    when 0
-      'no more'
-    else
-      bottle_number.to_s
-    end
-  end
-
-  def name(bottle_number=self.num)
-    case bottle_number
-    when 1
-      'bottle'
-    else
-      'bottles'
-    end
-  end
-
-  def action(bottle_number=self.num)
-    case bottle_number
-    when 0
-      "Go to the store and buy some more"
-    else
-      "Take #{pronoun(bottle_number)} down and pass it around"
-    end
-  end
-
-  def pronoun(bottle_number=self.num)
-    case bottle_number
-    when 1
-      'it'
-    else
-      'one'
-    end
-  end
 end
 
 class BottlishNumber
