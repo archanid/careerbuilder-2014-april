@@ -29,8 +29,8 @@ class Verse
   attr_reader :num, :bottle_number, :ending_bottle_number
 
   def initialize(num)
-    @bottle_number = num.to_bottlishnumber
     @bottle_number = SuitableVariant.bottle_number_for(num)
+    @bottle_number = num.to_bottlishnumber
   end
 
   def to_s
