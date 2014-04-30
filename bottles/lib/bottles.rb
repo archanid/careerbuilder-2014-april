@@ -26,7 +26,8 @@ class Verse
     "#{bottlish_number.to_s.capitalize} of beer on the wall, " +
     "#{bottlish_number} of beer.\n" +
     "#{action}, " +
-    "#{succ.quantity} #{succ.name} of beer on the wall.\n"
+    # "#{succ.quantity} #{succ.name} of beer on the wall.\n"
+    "#{succ} of beer on the wall.\n"
   end
 end
 
