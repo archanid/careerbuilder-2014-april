@@ -26,9 +26,7 @@ end
 
 class Verse
   extend Forwardable
-
   delegate [:quantity, :action, :name] => :bottle_number
-
   attr_reader :num, :bottle_number, :ending_bottle_number
 
   def initialize(num)
