@@ -46,7 +46,7 @@ class BottlishNumber
     end
   end
 
-  def name(bottle_number=self.bottle_number)
+  def name
     case bottle_number
     when 1
       'bottle'
@@ -55,7 +55,7 @@ class BottlishNumber
     end
   end
 
-  def action(bottle_number=self.bottle_number)
+  def action
     case bottle_number
     when 0
       "Go to the store and buy some more"
