@@ -23,17 +23,17 @@ class SuitableVariant
 end
 
 class Verse
-  attr_reader :num, :starting_bottle_number, :ending_bottle_number
+  attr_reader :num, :bottle_number, :ending_bottle_number
 
   def initialize(num)
-    @starting_bottle_number = SuitableVariant.get_bottle_number(num)
+    @bottle_number = SuitableVariant.get_bottle_number(num)
   end
 
   def to_s
-    "#{starting_bottle_number.quantity.capitalize} #{starting_bottle_number.name} of beer on the wall, " +
-    "#{starting_bottle_number.quantity} #{starting_bottle_number.name} of beer.\n" +
-    "#{starting_bottle_number.action}, " +
-    "#{starting_bottle_number.next.quantity} #{starting_bottle_number.next.name} of beer on the wall.\n"
+    "#{bottle_number.quantity.capitalize} #{bottle_number.name} of beer on the wall, " +
+    "#{bottle_number.quantity} #{bottle_number.name} of beer.\n" +
+    "#{bottle_number.action}, " +
+    "#{bottle_number.next.quantity} #{bottle_number.next.name} of beer on the wall.\n"
   end
 end
 
