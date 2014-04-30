@@ -16,11 +16,11 @@ class Verse
   attr_reader :num, :starting_bottle_number, :ending_bottle_number
 
   def initialize(num)
-    @starting_bottle_number = get_starting_bottle_number(num)
-    @ending_bottle_number = BottlishNumber.new(num-1)
+    @starting_bottle_number = get_bottle_number(num)
+    @ending_bottle_number = get_bottle_number(num-1)
   end
 
-  def get_starting_bottle_number(num)
+  def get_bottle_number(num)
     case num
     when 0
       Object.const_get("BottlishNumberZero")
@@ -48,8 +48,6 @@ class BottlishNumber
     case bottle_number
     when -1
       99.to_s
-    when 0
-      'no more'
     else
       bottle_number.to_s
     end
