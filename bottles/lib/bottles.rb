@@ -101,7 +101,12 @@ class BottlishNumber6 < BottlishNumber
 end
 
 class BeerSongBottlishNumber
-  def initialize()
+  extend Forwardable
+  delegate [:quantity, :name, :succ] => :bottlish_number
+  attr_reader :bottlish_number
+  
+  def initialize(bottlish_number)
+    @bottlish_number = :bottlish_number
   end
 
   def to_s
@@ -134,9 +139,9 @@ class Fixnum
 
   def to_beersongbotnum
     begin
-      Object.const_get("BeerSongBottlishNumber#{self.to_bottlishnumber}")
+      Object.const_get("BeerSongBottlishNumber#{self}")
     rescue
       BeerSongBottlishNumber
-    end.new
+    end.new(self.to_bottlishnumber)
   end
 end
