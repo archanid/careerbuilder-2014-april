@@ -24,7 +24,7 @@ class Verse
 
   def to_s
     "#{quantity.capitalize} #{name} of beer on the wall, " +
-    "#{quantity} #{name} of beer.\n" +
+    "#{bottlish_number} of beer.\n" +
     "#{action}, " +
     "#{succ.quantity} #{succ.name} of beer on the wall.\n"
   end
