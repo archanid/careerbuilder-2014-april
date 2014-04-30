@@ -103,8 +103,8 @@ This is the horse and the hound and the horn that belonged to the farmer sowing 
   end
 
   def test_random_line_start
-    expected_start = "This is"
-    assert tale.random.start_with?(expected_start)
+    expected = "This is"
+    assert_equal expected, tale.random.split(//).first(expected.length).join
   end
 
 end
