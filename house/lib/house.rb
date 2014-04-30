@@ -5,9 +5,8 @@ class House
   end
 
   def random
-    1.upto(12).map {|i| line(i)}.join("\n")
-    puts random_lines
-    "This is %s the house that Jack built.\n" % random_lines
+    puts segments.last(1)
+    "This is %s the house that Jack built.\n" % [random_lines]
   end
 
   def random_lines
