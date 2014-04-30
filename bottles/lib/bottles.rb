@@ -26,8 +26,8 @@ class Verse
   attr_reader :num, :starting_bottle_number, :ending_bottle_number
 
   def initialize(num)
-    @starting_bottle_number = SuitableVariant.get_bottle_number(num)
     @starting_bottle_number = get_bottle_number(num)
+    @starting_bottle_number = SuitableVariant.get_bottle_number(num)
 
     if num < 1
       @ending_bottle_number = get_bottle_number(99)
