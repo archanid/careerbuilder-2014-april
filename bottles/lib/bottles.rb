@@ -84,7 +84,7 @@ end
 
 class BeerSongBottleNumber
   extend Forwardable
-  delegate [:quantity, :name] => :bottlish_number
+  #delegate [:quantity, :name] => :bottlish_number
 
   attr_reader :bottlish_number
 
@@ -109,7 +109,7 @@ class BeerSongBottleNumber
   end
 
   def method_missing(msg, *args)
-    bottlish_number.send(msg, args)
+    bottlish_number.send(msg, *args)
   end
 end
 
