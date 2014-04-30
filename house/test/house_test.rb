@@ -98,15 +98,13 @@ This is the horse and the hound and the horn that belonged to the farmer sowing 
   end
 
   def test_random_line_end
-    skip
-    expected_end = "the house that Jack built."
-    assert_true tale.random.ends_with?(expected_end)
+    expected_end = "the house that Jack built.\n"
+    assert tale.random.end_with?(expected_end)
   end
 
   def test_random_line_start
-    skip
     expected_start = "This is"
-    assert_true tale.random.start_with?(expected_start)
+    assert tale.random.start_with?(expected_start)
   end
 
 end

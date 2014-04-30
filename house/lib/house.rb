@@ -3,7 +3,11 @@ class House
   def recite
     1.upto(12).map {|i| line(i)}.join("\n")
   end
-  
+
+  def random
+    1.upto(12).map {|i| line(i)}.join("\n")
+  end
+
   def line(num)
     "This is %s.\n" % ballad_of_jack.last(num).join(" ")
   end
