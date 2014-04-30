@@ -96,7 +96,7 @@ class BeerSongBottleNumber
   end
 
   def succ
-    bottlish_number.succ.to_beersongbotnum
+    bottlish_number.succ.to_beersongbotnum # Law of Demeter violation
   end
 
   def action
