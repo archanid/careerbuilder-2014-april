@@ -8,23 +8,23 @@ class Bottles
   end
 
   def verse(num)
-    Verse.new(num).verse(num)
+    Verse.new(num).to_s
   end
 end
 
-
 class Verse
-  attr_reader :num
+  attr_reader :num, :starting_bottle_number, :ending_bottle_number
 
   def initialize(num)
-    @num = num
+    @starting_bottle_number = BottlishNumber.new(num)
+    @ending_bottle_number = BottlishNumber.new(num-1)
   end
 
-  def verse(num)
-    "#{quantity.capitalize} #{name} of beer on the wall, " +
-    "#{quantity} #{name} of beer.\n" +
-    "#{action}, " +
-    "#{quantity(num-1)} #{name(num-1)} of beer on the wall.\n"
+  def to_s
+    "#{starting_bottle_number.quantity.capitalize} #{starting_bottle_number.name} of beer on the wall, " +
+    "#{starting_bottle_number.quantity} #{starting_bottle_number.name} of beer.\n" +
+    "#{starting_bottle_number.action}, " +
+    "#{ending_bottle_number.quantity} #{ending_bottle_number.name} of beer on the wall.\n"
   end
 
   private
@@ -75,7 +75,7 @@ class BottlishNumber
     @bottle_number = number
   end
 
-  def quantity(bottle_number=self.num)
+  def quantity(bottle_number=self.bottle_number)
     case bottle_number
     when -1
       99.to_s
@@ -86,7 +86,7 @@ class BottlishNumber
     end
   end
 
-  def name(bottle_number=self.num)
+  def name(bottle_number=self.bottle_number)
     case bottle_number
     when 1
       'bottle'
@@ -95,7 +95,7 @@ class BottlishNumber
     end
   end
 
-  def action(bottle_number=self.num)
+  def action(bottle_number=self.bottle_number)
     case bottle_number
     when 0
       "Go to the store and buy some more"
@@ -104,7 +104,7 @@ class BottlishNumber
     end
   end
 
-  def pronoun(bottle_number=self.num)
+  def pronoun(bottle_number=self.bottle_number)
     case bottle_number
     when 1
       'it'
@@ -112,4 +112,8 @@ class BottlishNumber
       'one'
     end
   end
+end
+
+class BottlishNumberZero < BottlishNumber
+
 end
