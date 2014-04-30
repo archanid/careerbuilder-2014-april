@@ -39,7 +39,7 @@ class Verse
     "#{starting_bottle_number.quantity.capitalize} #{starting_bottle_number.name} of beer on the wall, " +
     "#{starting_bottle_number.quantity} #{starting_bottle_number.name} of beer.\n" +
     "#{starting_bottle_number.action}, " +
-    "#{ending_bottle_number.quantity} #{ending_bottle_number.name} of beer on the wall.\n"
+    "#{starting_bottle_number.next.quantity} #{starting_bottle_number.next.name} of beer on the wall.\n"
   end
 end
 
@@ -55,7 +55,7 @@ class BottlishNumber
   end
 
   def next
-    BottlishNumber.new(bottle_number.pred)
+    SuitableVariant.get_bottle_number(bottle_number.pred)
   end
 
   def name
@@ -78,6 +78,10 @@ class BottlishNumber0 < BottlishNumber
 
   def quantity
     "no more"
+  end
+
+  def next
+    BottlishNumber.new(99)
   end
 end
 
