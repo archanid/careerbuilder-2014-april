@@ -97,4 +97,14 @@ This is the horse and the hound and the horn that belonged to the farmer sowing 
     assert_equal expected, tale.recite
   end
 
+  def test_random_line_end
+    expected_end = "the house that Jack built."
+    assert_true tale.random.ends_with?(expected_end)
+  end
+
+  def test_random_line_start
+    expected_start = "This is"
+    assert_true tale.random.start_with?(expected_start)
+  end
+
 end
