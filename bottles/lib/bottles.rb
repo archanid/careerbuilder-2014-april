@@ -15,11 +15,11 @@ end
 
 class Verse
   extend Forwardable
-  delegate [:quantity, :action, :name, :following] => :bottle_number
-  attr_reader :num, :bottle_number
+  delegate [:quantity, :action, :name, :following] => :bottlish_number
+  attr_reader :bottlish_number
 
   def initialize(num)
-    @bottle_number = num.to_bottlishnumber
+    @bottlish_number = num.to_bottlishnumber
   end
 
   def to_s
@@ -99,29 +99,8 @@ class BottlishNumber6 < BottlishNumber
   end
 end
 
-class Fixnum
-  def to_bottlishnumber
-    begin
-      Object.const_get("BottlishNumber#{self}")
-    rescue
-      BottlishNumber
-    end.new(self)
-  end
-
-  def to_beersongbottlishnumber
-    begin
-      Object.const_get("BeerSongBottlishNumber#{self.to_bottlishnumber}")
-    rescue
-      BeerSongBottlishNumber
-    end.new
-  end
-end
-
 class BeerSongBottlishNumber
-
-  
   def initialize()
-
   end
 
   def to_s
@@ -140,5 +119,23 @@ end
 class BeerSongBottlishNumber1 < BeerSongBottlishNumber
   def pronoun
     'it'
+  end
+end
+
+class Fixnum
+  def to_bottlishnumber
+    begin
+      Object.const_get("BottlishNumber#{self}")
+    rescue
+      BottlishNumber
+    end.new(self)
+  end
+
+  def to_beersongbottlishnumber
+    begin
+      Object.const_get("BeerSongBottlishNumber#{self.to_bottlishnumber}")
+    rescue
+      BeerSongBottlishNumber
+    end.new
   end
 end
