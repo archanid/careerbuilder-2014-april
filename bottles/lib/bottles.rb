@@ -29,19 +29,19 @@ class Verse
 
   private
 
-  def quantity(num=self.num)
-    case num
+  def quantity(bottle_number=self.num)
+    case bottle_number
     when -1
       99.to_s
     when 0
       'no more'
     else
-      num.to_s
+      bottle_number.to_s
     end
   end
 
-  def container(num=self.num)
-    case num
+  def container(bottle_number=self.num)
+    case bottle_number
     when 1
       'bottle'
     else
@@ -49,17 +49,17 @@ class Verse
     end
   end
 
-  def action(num=self.num)
-    case num
+  def action(bottle_number=self.num)
+    case bottle_number
     when 0
       "Go to the store and buy some more"
     else
-      "Take #{pronoun(num)} down and pass it around"
+      "Take #{pronoun(bottle_number)} down and pass it around"
     end
   end
 
-  def pronoun(num=self.num)
-    case num
+  def pronoun(bottle_number=self.num)
+    case bottle_number
     when 1
       'it'
     else
