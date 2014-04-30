@@ -60,11 +60,11 @@ class BottlishNumber
     when 0
       "Go to the store and buy some more"
     else
-      "Take #{pronoun(bottle_number)} down and pass it around"
+      "Take #{pronoun} down and pass it around"
     end
   end
 
-  def pronoun(bottle_number=self.bottle_number)
+  def pronoun
     case bottle_number
     when 1
       'it'
