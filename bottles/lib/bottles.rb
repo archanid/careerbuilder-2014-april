@@ -30,7 +30,7 @@ class Verse
   end
 end
 
-class BottlishNumber
+class BottleNumber
   extend Forwardable
   delegate [:to_beersongbotnum] => :number
   attr_reader :number
@@ -48,7 +48,7 @@ class BottlishNumber
   end
 
   def succ
-    number.pred.to_bottlishnumber
+    number.pred.to_BottleNumber
   end
 
   def name
@@ -56,23 +56,23 @@ class BottlishNumber
   end
 end
 
-class BottlishNumber0 < BottlishNumber
+class BottleNumber0 < BottleNumber
   def quantity
     "no more"
   end
 
   def succ
-    99.to_bottlishnumber
+    99.to_BottleNumber
   end
 end
 
-class BottlishNumber1 < BottlishNumber
+class BottleNumber1 < BottleNumber
   def name
     'bottle'
   end
 end
 
-class BottlishNumber6 < BottlishNumber
+class BottleNumber6 < BottleNumber
   def name
     'six pack'
   end
@@ -82,7 +82,7 @@ class BottlishNumber6 < BottlishNumber
   end
 end
 
-class BeerSongBottlishNumber
+class BeerSongBottleNumber
   extend Forwardable
   delegate [:quantity, :name] => :bottlish_number
   attr_reader :bottlish_number
@@ -108,32 +108,32 @@ class BeerSongBottlishNumber
   end
 end
 
-class BeerSongBottlishNumber1 < BeerSongBottlishNumber
+class BeerSongBottleNumber1 < BeerSongBottleNumber
   def pronoun
     'it'
   end
 end
 
-class BeerSongBottlishNumber0 < BeerSongBottlishNumber
+class BeerSongBottleNumber0 < BeerSongBottleNumber
   def action
     "Go to the store and buy some more"
   end
 end
 
 class Fixnum
-  def to_bottlishnumber
+  def to_BottleNumber
     begin
-      Object.const_get("BottlishNumber#{self}")
+      Object.const_get("BottleNumber#{self}")
     rescue
-      BottlishNumber
+      BottleNumber
     end.new(self)
   end
 
   def to_beersongbotnum
     begin
-      Object.const_get("BeerSongBottlishNumber#{self}")
+      Object.const_get("BeerSongBottleNumber#{self}")
     rescue
-      BeerSongBottlishNumber
-    end.new(self.to_bottlishnumber)
+      BeerSongBottleNumber
+    end.new(self.to_BottleNumber)
   end
 end
