@@ -1,3 +1,5 @@
+require 'forwardable'
+
 class Bottles
   def song
     verses(99, 0)
@@ -23,6 +25,10 @@ class SuitableVariant
 end
 
 class Verse
+  extend Forwardable
+
+  delegate [:quantity, :action, :name] => :bottle_number
+
   attr_reader :num, :bottle_number, :ending_bottle_number
 
   def initialize(num)
