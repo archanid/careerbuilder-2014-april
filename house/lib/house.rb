@@ -3,6 +3,10 @@ class House
   def recite
     1.upto(12).map {|i| line(i)}.join("\n")
   end
+  
+  def line(num)
+    "This is %s.\n" % ballad_of_jack.last(num).join(" ")
+  end
 
   def ballad_of_jack
     [ "the horse and the hound and the horn that belonged to",
@@ -18,9 +22,4 @@ class House
       "the malt that lay in", 
       "the house that Jack built"]
   end
-
-  def line(num)
-    "This is %s.\n" % ballad_of_jack.last(num).join(" ")
-  end
-
 end
