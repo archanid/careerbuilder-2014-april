@@ -26,7 +26,7 @@ end
 
 class Verse
   extend Forwardable
-  delegate [:quantity, :action, :name] => :bottle_number
+  delegate [:quantity, :action, :name, :following] => :bottle_number
   attr_reader :num, :bottle_number, :ending_bottle_number
 
   def initialize(num)
@@ -34,10 +34,10 @@ class Verse
   end
 
   def to_s
-    "#{quantity.capitalize} #{bottle_number.name} of beer on the wall, " +
-    "#{bottle_number.quantity} #{bottle_number.name} of beer.\n" +
-    "#{bottle_number.action}, " +
-    "#{bottle_number.next.quantity} #{bottle_number.next.name} of beer on the wall.\n"
+    "#{quantity.capitalize} #{name} of beer on the wall, " +
+    "#{quantity} #{name} of beer.\n" +
+    "#{action}, " +
+    "#{following.quantity} #{following.name} of beer on the wall.\n"
   end
 end
 
@@ -52,7 +52,7 @@ class BottlishNumber
     bottle_number.to_s
   end
 
-  def next
+  def following
     SuitableVariant.bottle_number_for(bottle_number.pred)
   end
 
@@ -78,7 +78,7 @@ class BottlishNumber0 < BottlishNumber
     "no more"
   end
 
-  def next
+  def following
     SuitableVariant.bottle_number_for(99)
   end
 end
