@@ -32,7 +32,7 @@ end
 
 class BottlishNumber
   extend Forwardable
-  delegate [:to_beersongbottlishnumber] => :number
+  delegate [:to_beersongbotnum] => :number
   attr_reader :number
 
   def initialize(number)
