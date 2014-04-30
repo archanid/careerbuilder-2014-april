@@ -35,14 +35,6 @@ class Verse
     end
   end
 
-  def get_bottle_number(num)
-    begin
-      Object.const_get("BottlishNumber#{num}")
-    rescue
-      BottlishNumber
-    end.new(num)
-  end
-
   def to_s
     "#{starting_bottle_number.quantity.capitalize} #{starting_bottle_number.name} of beer on the wall, " +
     "#{starting_bottle_number.quantity} #{starting_bottle_number.name} of beer.\n" +
