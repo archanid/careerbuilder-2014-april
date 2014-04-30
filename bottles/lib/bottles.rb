@@ -84,8 +84,6 @@ end
 
 class BeerSongBottleNumber
   extend Forwardable
-  #delegate [:quantity, :name] => :bottlish_number
-
   attr_reader :bottlish_number
 
   def initialize(bottlish_number)
