@@ -26,15 +26,10 @@ class Verse
   end
 
   def get_bottle_number(num)
-    case true
-    when num == 6
-      Object.const_get("BottlishNumberSix")
-    when num == 0
-      Object.const_get("BottlishNumberZero")
-    when num == 1
-      Object.const_get("BottlishNumberOne")
-    else
-      Object.const_get("BottlishNumber")
+    begin
+      Object.const_get("BottlishNumber#{num}")
+    rescue
+      BottlishNumber
     end.new(num)
   end
 
@@ -70,7 +65,7 @@ class BottlishNumber
   end
 end
 
-class BottlishNumberZero < BottlishNumber
+class BottlishNumber0 < BottlishNumber
   def action
     "Go to the store and buy some more"
   end
@@ -80,7 +75,7 @@ class BottlishNumberZero < BottlishNumber
   end
 end
 
-class BottlishNumberOne < BottlishNumber
+class BottlishNumber1 < BottlishNumber
   def name
     'bottle'
   end
@@ -90,7 +85,7 @@ class BottlishNumberOne < BottlishNumber
   end
 end
 
-class BottlishNumberSix < BottlishNumber
+class BottlishNumber6 < BottlishNumber
   def name
     'six pack'
   end
