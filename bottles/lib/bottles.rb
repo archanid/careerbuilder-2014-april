@@ -26,10 +26,12 @@ class Verse
   end
 
   def get_bottle_number(num)
-    case num
-    when 0
+    case true
+    when num == 6
+      Object.const_get("BottlishNumberSix")
+    when num == 0
       Object.const_get("BottlishNumberZero")
-    when 1
+    when num == 1
       Object.const_get("BottlishNumberOne")
     else
       Object.const_get("BottlishNumber")
@@ -85,5 +87,15 @@ class BottlishNumberOne < BottlishNumber
 
   def pronoun
     'it'
+  end
+end
+
+class BottlishNumberSix < BottlishNumber
+  def name
+    'six pack'
+  end
+
+  def quantity
+    (bottle_number / 6).to_s
   end
 end
