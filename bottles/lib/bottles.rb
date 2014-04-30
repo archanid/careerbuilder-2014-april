@@ -92,7 +92,11 @@ end
 
 class BottlishNumberSix < BottlishNumber
   def name
-    'six pack'
+    if bottle_number == 6
+      'six pack'
+    else
+      'six packs'
+    end
   end
 
   def quantity
