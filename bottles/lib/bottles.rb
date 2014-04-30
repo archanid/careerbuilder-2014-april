@@ -67,3 +67,43 @@ class Verse
     end
   end
 end
+
+class BottlishNumber
+    def quantity(bottle_number=self.num)
+    case bottle_number
+    when -1
+      99.to_s
+    when 0
+      'no more'
+    else
+      bottle_number.to_s
+    end
+  end
+
+  def container(bottle_number=self.num)
+    case bottle_number
+    when 1
+      'bottle'
+    else
+      'bottles'
+    end
+  end
+
+  def action(bottle_number=self.num)
+    case bottle_number
+    when 0
+      "Go to the store and buy some more"
+    else
+      "Take #{pronoun(bottle_number)} down and pass it around"
+    end
+  end
+
+  def pronoun(bottle_number=self.num)
+    case bottle_number
+    when 1
+      'it'
+    else
+      'one'
+    end
+  end
+end
