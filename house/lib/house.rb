@@ -5,14 +5,23 @@ class House
   end
 
   def random
+    "This is %s %s.\n" % [random_lines, segments.last(1)]
     1.upto(12).map {|i| line(i)}.join("\n")
   end
 
-  def line(num)
-    "This is %s.\n" % ballad_of_jack.last(num).join(" ")
+  def random_lines
+    random_array.map {|i| segments[i]}.join(" ")
   end
 
-  def ballad_of_jack
+  def random_array
+    [3, 2, 5, 7, 12, 9, 6, 11, 4, 8, 10]
+  end
+
+  def line(num)
+    "This is %s.\n" % segments.last(num).join(" ")
+  end
+
+  def segments
     [ "the horse and the hound and the horn that belonged to",
       "the farmer sowing his corn that kept",
       "the rooster that crowed in the morn that woke",
