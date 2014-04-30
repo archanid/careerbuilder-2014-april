@@ -75,5 +75,11 @@ class BottlishNumber
 end
 
 class BottlishNumberZero < BottlishNumber
+  def action
+    "Go to the store and buy some more"
+  end
 
+  def quantity
+    "no more"
+  end
 end
