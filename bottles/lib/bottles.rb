@@ -19,6 +19,7 @@ class Verse
   attr_reader :bottlish_number
 
   def initialize(num)
+    @bottlish_number = num.to_beersongbotnum
     @bottlish_number = num.to_bottlishnumber
   end
 
@@ -131,7 +132,7 @@ class Fixnum
     end.new(self)
   end
 
-  def to_beersongbottlishnumber
+  def to_beersongbotnum
     begin
       Object.const_get("BeerSongBottlishNumber#{self.to_bottlishnumber}")
     rescue
