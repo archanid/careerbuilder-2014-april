@@ -35,7 +35,7 @@ class BottlishNumber
     @bottle_number = number
   end
 
-  def quantity(bottle_number=self.bottle_number)
+  def quantity
     case bottle_number
     when -1
       99.to_s
