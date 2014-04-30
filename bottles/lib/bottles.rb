@@ -19,8 +19,8 @@ class Verse
   attr_reader :bottlish_number
 
   def initialize(num)
-    @bottlish_number = num.to_beersongbotnum
     @bottlish_number = num.to_bottlishnumber
+    @bottlish_number = num.to_beersongbotnum
   end
 
   def to_s
@@ -104,9 +104,9 @@ class BeerSongBottlishNumber
   extend Forwardable
   delegate [:quantity, :name, :succ] => :bottlish_number
   attr_reader :bottlish_number
-  
+
   def initialize(bottlish_number)
-    @bottlish_number = :bottlish_number
+    @bottlish_number = bottlish_number
   end
 
   def to_s
@@ -125,6 +125,12 @@ end
 class BeerSongBottlishNumber1 < BeerSongBottlishNumber
   def pronoun
     'it'
+  end
+end
+
+class BeerSongBottlishNumber0 < BeerSongBottlishNumber
+  def action
+    "Go to the store and buy some more"
   end
 end
 
