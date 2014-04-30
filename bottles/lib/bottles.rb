@@ -19,7 +19,6 @@ class Verse
   attr_reader :bottlish_number
 
   def initialize(num)
-    @bottlish_number = num.to_bottlishnumber
     @bottlish_number = num.to_beersongbotnum
   end
 
