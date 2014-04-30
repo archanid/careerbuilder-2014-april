@@ -84,7 +84,7 @@ end
 
 class BeerSongBottlishNumber
   extend Forwardable
-  delegate [:quantity, :name, :succ] => :bottlish_number
+  delegate [:quantity, :name] => :bottlish_number
   attr_reader :bottlish_number
 
   def initialize(bottlish_number)
@@ -93,6 +93,10 @@ class BeerSongBottlishNumber
 
   def to_s
     "#{quantity} #{name}"
+  end
+
+  def succ
+    bottlish_number.succ.to_beersongbotnum
   end
 
   def action
