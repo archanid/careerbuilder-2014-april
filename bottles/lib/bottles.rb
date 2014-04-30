@@ -16,7 +16,6 @@ class Verse
   attr_reader :num, :starting_bottle_number, :ending_bottle_number
 
   def initialize(num)
-
     case num
     when 0
       @starting_bottle_number = BottlishNumberZero.new(num)
@@ -24,7 +23,6 @@ class Verse
       @starting_bottle_number = BottlishNumber.new(num)
     end
 
-    #@starting_bottle_number = BottlishNumber.new(num)
     @ending_bottle_number = BottlishNumber.new(num-1)
 
   end
