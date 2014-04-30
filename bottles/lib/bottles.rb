@@ -13,16 +13,6 @@ class Bottles
   end
 end
 
-class SuitableVariant
-  def self.bottlish_number_for(num)
-    begin
-      Object.const_get("BottlishNumber#{num}")
-    rescue
-      BottlishNumber
-    end.new(num)
-  end
-end
-
 class Verse
   extend Forwardable
   delegate [:quantity, :action, :name, :following] => :bottle_number
