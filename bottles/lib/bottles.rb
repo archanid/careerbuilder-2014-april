@@ -8,8 +8,8 @@ class Bottles
     upper_bound.downto(lower_bound).map {|i| verse(i)}.join("\n")
   end
 
-  def verse(num)
-    Verse.new(num).to_s
+  def verse(verse_number)
+    Verse.new(verse_number).to_s
   end
 end
 
@@ -18,8 +18,8 @@ class Verse
   delegate [:quantity, :action, :name, :succ] => :bottlish_number
   attr_reader :bottlish_number
 
-  def initialize(num)
-    @bottlish_number = num.to_beersongbotnum
+  def initialize(verse_number)
+    @bottlish_number = verse_number.to_beersongbotnum
   end
 
   def to_s
