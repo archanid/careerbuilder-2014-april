@@ -13,7 +13,7 @@ class Bottles
 end
 
 class SuitableVariant
-  def self.get_bottle_number(num)
+  def self.bottle_number_for(num)
     begin
       Object.const_get("BottlishNumber#{num}")
     rescue
@@ -26,7 +26,7 @@ class Verse
   attr_reader :num, :bottle_number, :ending_bottle_number
 
   def initialize(num)
-    @bottle_number = SuitableVariant.get_bottle_number(num)
+    @bottle_number = SuitableVariant.bottle_number_for(num)
   end
 
   def to_s
@@ -49,7 +49,7 @@ class BottlishNumber
   end
 
   def next
-    SuitableVariant.get_bottle_number(bottle_number.pred)
+    SuitableVariant.bottle_number_for(bottle_number.pred)
   end
 
   def name
@@ -75,7 +75,7 @@ class BottlishNumber0 < BottlishNumber
   end
 
   def next
-    SuitableVariant.get_bottle_number(99)
+    SuitableVariant.bottle_number_for(99)
   end
 end
 
