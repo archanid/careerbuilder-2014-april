@@ -47,6 +47,10 @@ class BottlishNumber
     @bottle_number = number
   end
 
+  def to_s
+    "#{quantity}"
+  end
+
   def quantity
     bottle_number.to_s
   end
@@ -112,18 +116,26 @@ class Fixnum
   end
 end
 
-# class BeerSongBottlishNumber
-#   attr_accessor :bottle_number
+class BottleNumber
+
+end
+
+class BeerSongBottlishNumber
+  attr_accessor :bottle_number
   
-#   def initialize(number)
-#     @bottle_number = number
-#   end
+  def initialize(bottlish_number)
+    @bottle_number = number
+  end
 
-#   def action
-#     "Take #{pronoun} down and pass it around"
-#   end
+  def to_s
+    "#{quantity} #{name}"
+  end
 
-#   def pronoun
-#     'one'
-#   end
-# end
+  def action
+    "Take #{pronoun} down and pass it around"
+  end
+
+  def pronoun
+    'one'
+  end
+end
