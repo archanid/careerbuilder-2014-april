@@ -20,13 +20,11 @@ class Verse
     case num
     when 0
       @starting_bottle_number = BottlishNumberZero.new(num)
-      @ending_bottle_number = BottlishNumberZero.new(num-1)
     else
       @starting_bottle_number = BottlishNumber.new(num)
-      @ending_bottle_number = BottlishNumber.new(num-1)
     end
 
-    @starting_bottle_number = BottlishNumber.new(num)
+    #@starting_bottle_number = BottlishNumber.new(num)
     @ending_bottle_number = BottlishNumber.new(num-1)
 
   end
