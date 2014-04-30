@@ -113,15 +113,15 @@ class Fixnum
       Object.const_get("BeerSongBottlishNumber#{self.to_bottlishnumber}")
     rescue
       BeerSongBottlishNumber
-    end.new(self.to_bottlishnumber)
+    end.new
   end
 end
 
 class BeerSongBottlishNumber
-  attr_accessor :number
+
   
-  def initialize(number)
-    @number = number
+  def initialize()
+
   end
 
   def to_s
