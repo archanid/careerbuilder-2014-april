@@ -78,7 +78,7 @@ class BottlishNumber0 < BottlishNumber
   end
 
   def following
-    SuitableVariant.bottle_number_for(99)
+    99.to_bottlishnumber
   end
 end
 
