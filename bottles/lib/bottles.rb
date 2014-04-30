@@ -39,6 +39,7 @@ class BottlishNumber
     @number = number
   end
 
+  # probably won't use this
   def to_s
     "#{quantity}"
   end
@@ -117,10 +118,10 @@ class Fixnum
 end
 
 class BeerSongBottlishNumber
-  attr_accessor :bottlish_number
+  attr_accessor :number
   
-  def initialize(bottlish_number)
-
+  def initialize(number)
+    @number = number
   end
 
   def to_s
