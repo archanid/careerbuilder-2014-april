@@ -85,6 +85,7 @@ end
 class BeerSongBottleNumber
   extend Forwardable
   delegate [:quantity, :name] => :bottlish_number
+
   attr_reader :bottlish_number
 
   def initialize(bottlish_number)
@@ -105,6 +106,10 @@ class BeerSongBottleNumber
 
   def pronoun
     'one'
+  end
+
+  def method_missing(msg, *args)
+    bottlish_number.send(msg, args)
   end
 end
 
