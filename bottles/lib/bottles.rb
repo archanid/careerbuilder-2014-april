@@ -27,12 +27,6 @@ class Verse
 
   def initialize(num)
     @starting_bottle_number = SuitableVariant.get_bottle_number(num)
-
-    if num < 1
-      @ending_bottle_number = SuitableVariant.get_bottle_number(99)
-    else
-      @ending_bottle_number = SuitableVariant.get_bottle_number(num-1)
-    end
   end
 
   def to_s
