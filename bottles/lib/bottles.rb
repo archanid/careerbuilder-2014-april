@@ -116,7 +116,6 @@ class Fixnum
   end
 end
 
-
 class BeerSongBottlishNumber
   attr_accessor :bottle_number
   
