@@ -60,7 +60,7 @@ class Verse
   attr_reader :num
 
   def initialize(num)
-  
+    @num = num
   end
 
   def verse(num)
