@@ -17,7 +17,11 @@ class Verse
 
   def initialize(num)
     @starting_bottle_number = get_bottle_number(num)
-    @ending_bottle_number = get_bottle_number(num-1)
+    if num < 1
+      @ending_bottle_number = get_bottle_number(99)
+    else
+      @ending_bottle_number = get_bottle_number(num-1)
+    end
   end
 
   def get_bottle_number(num)
@@ -47,12 +51,7 @@ class BottlishNumber
   end
 
   def quantity
-    case bottle_number
-    when -1
-      99.to_s
-    else
-      bottle_number.to_s
-    end
+    bottle_number.to_s
   end
 
   def name
@@ -85,5 +84,11 @@ class BottlishNumberOne < BottlishNumber
 
   def pronoun
     'it'
+  end
+end
+
+class BottlishNumberNeg1 < BottlishNumber
+  def quantity
+    99.to_s
   end
 end
