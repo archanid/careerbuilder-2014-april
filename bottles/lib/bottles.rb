@@ -136,3 +136,9 @@ class BeerSongBottlishNumber
     'one'
   end
 end
+
+class BeerSongBottlishNumber1 < BeerSongBottlishNumber
+  def pronoun
+    'it'
+  end
+end
