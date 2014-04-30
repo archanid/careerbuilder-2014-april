@@ -102,6 +102,16 @@ class BottlishNumber6 < BottlishNumber
   end
 end
 
+class Fixnum
+  def to_bottlishnumber
+    begin
+      Object.const_get("BottlishNumber#{self}")
+    rescue
+      BottlishNumber
+    end.new(self)
+  end
+end
+
 # class BeerSongBottlishNumber
 #   attr_accessor :bottle_number
   
