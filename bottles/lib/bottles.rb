@@ -8,11 +8,11 @@ class Bottles
   end
 
   def verse(num)
-    Verse.new(num).verse(num)
     "#{quantity(num).capitalize} #{container(num)} of beer on the wall, " +
     "#{quantity(num)} #{container(num)} of beer.\n" +
     "#{action(num)}, " +
     "#{quantity(num-1)} #{container(num-1)} of beer on the wall.\n"
+    Verse.new(num).verse(num)
   end
 
   private
