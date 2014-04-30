@@ -55,7 +55,7 @@ class BottlishNumber
   end
 
   def next
-    BottlishNumber.new(number.pred)
+    BottlishNumber.new(bottle_number.pred)
   end
 
   def name
