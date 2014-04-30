@@ -29,7 +29,6 @@ class Verse
   attr_reader :num, :bottle_number, :ending_bottle_number
 
   def initialize(num)
-    @bottle_number = SuitableVariant.bottle_number_for(num)
     @bottle_number = num.to_bottlishnumber
   end
 
@@ -53,7 +52,7 @@ class BottlishNumber
   end
 
   def following
-    SuitableVariant.bottle_number_for(bottle_number.pred)
+    bottle_number.pred.to_bottlishnumber
   end
 
   def name
