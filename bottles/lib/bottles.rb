@@ -23,7 +23,7 @@ class Verse
   end
 
   def to_s
-    "#{bottlish_number.to_s.capitalize} of beer on the wall, " +
+    "#{bottlish_number} of beer on the wall, ".capitalize +
     "#{bottlish_number} of beer.\n" +
     "#{action}, " +
     "#{succ} of beer on the wall.\n"
