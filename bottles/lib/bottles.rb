@@ -10,46 +10,6 @@ class Bottles
   def verse(num)
     Verse.new(num).verse(num)
   end
-
-  private
-
-  def quantity(num)
-    case num
-    when -1
-      99.to_s
-    when 0
-      'no more'
-    else
-      num.to_s
-    end
-  end
-
-  def container(num)
-    case num
-    when 1
-      'bottle'
-    else
-      'bottles'
-    end
-  end
-
-  def action(num)
-    case num
-    when 0
-      "Go to the store and buy some more"
-    else
-      "Take #{pronoun(num)} down and pass it around"
-    end
-  end
-
-  def pronoun(num)
-    case num
-    when 1
-      'it'
-    else
-      'one'
-    end
-  end
 end
 
 
