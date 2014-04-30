@@ -101,3 +101,13 @@ class BottlishNumber6 < BottlishNumber
     (bottle_number / 6).to_s
   end
 end
+
+class BeerSongBottlishNumber
+  def action
+    "Take #{pronoun} down and pass it around"
+  end
+
+  def pronoun
+    'one'
+  end
+end
