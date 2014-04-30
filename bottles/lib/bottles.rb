@@ -54,6 +54,10 @@ class BottlishNumber
     bottle_number.to_s
   end
 
+  def next
+    BottlishNumber.new(number.pred)
+  end
+
   def name
     'bottles'
   end
