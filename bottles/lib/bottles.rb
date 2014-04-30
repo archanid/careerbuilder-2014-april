@@ -75,10 +75,6 @@ class BottlishNumber1 < BottlishNumber
   def name
     'bottle'
   end
-
-  def pronoun
-    'it'
-  end
 end
 
 class BottlishNumber6 < BottlishNumber
