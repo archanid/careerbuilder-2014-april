@@ -56,12 +56,7 @@ class BottlishNumber
   end
 
   def name
-    case bottle_number
-    when 1
-      'bottle'
-    else
-      'bottles'
-    end
+    'bottles'
   end
 
   def action
@@ -69,12 +64,7 @@ class BottlishNumber
   end
 
   def pronoun
-    case bottle_number
-    when 1
-      'it'
-    else
-      'one'
-    end
+    'one'
   end
 end
 
