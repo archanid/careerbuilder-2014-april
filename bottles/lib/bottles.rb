@@ -17,6 +17,10 @@ class Verse
 
   def initialize(num)
     @starting_bottle_number = get_bottle_number(num)
+    # This is a great idea from Chris
+    # We now have 99 way up high, closer to where we could
+    # extract it and pass in a value for it.
+    # Instead of buried in a subclass
     if num < 1
       @ending_bottle_number = get_bottle_number(99)
     else
@@ -84,11 +88,5 @@ class BottlishNumberOne < BottlishNumber
 
   def pronoun
     'it'
-  end
-end
-
-class BottlishNumberNeg1 < BottlishNumber
-  def quantity
-    99.to_s
   end
 end
