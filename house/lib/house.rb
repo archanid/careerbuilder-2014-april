@@ -1,5 +1,9 @@
 class House
+  def recite
+    (1..pieces.length).map {|i| line(i)}.join("\n")
+  end
 
+<<<<<<< HEAD
   def recite
     (1..12).map {|i| line(i) }.join("\n")
   end
