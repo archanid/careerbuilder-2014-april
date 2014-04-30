@@ -15,7 +15,7 @@ end
 
 class Verse
   extend Forwardable
-  delegate [:quantity, :action, :name, :succ] => :bottlish_number
+  delegate [:action, :succ] => :bottlish_number
   attr_reader :bottlish_number
 
   def initialize(verse_number)
@@ -106,8 +106,8 @@ class BeerSongBottleNumber
     'one'
   end
 
-  def method_missing(msg, *args)
-    bottlish_number.send(msg, *args)
+  def method_missing(message, *args)
+    bottlish_number.send(message, *args)
   end
 end
 
