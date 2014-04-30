@@ -58,10 +58,6 @@ class BottlishNumber
 end
 
 class BottlishNumber0 < BottlishNumber
-  def action
-    "Go to the store and buy some more"
-  end
-
   def quantity
     "no more"
   end
