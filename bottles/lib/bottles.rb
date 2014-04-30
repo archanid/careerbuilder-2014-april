@@ -56,14 +56,6 @@ class BottlishNumber
   def name
     'bottles'
   end
-
-  def action
-    "Take #{pronoun} down and pass it around"
-  end
-
-  def pronoun
-    'one'
-  end
 end
 
 class BottlishNumber0 < BottlishNumber
