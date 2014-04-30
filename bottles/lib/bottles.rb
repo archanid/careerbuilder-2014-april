@@ -12,6 +12,9 @@ class Bottles
   end
 end
 
+class SuitableVariant
+end
+
 class Verse
   attr_reader :num, :starting_bottle_number, :ending_bottle_number
 
