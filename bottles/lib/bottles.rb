@@ -81,6 +81,7 @@ class BottlishNumber0 < BottlishNumber
   end
 
   def next
+    SuitableVariant.get_bottle_number(99)
     BottlishNumber.new(99)
   end
 end
