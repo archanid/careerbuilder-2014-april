@@ -24,6 +24,8 @@ class Verse
     case num
     when 0
       Object.const_get("BottlishNumberZero")
+    when 1
+      Object.const_get("BottlishNumberOne")
     else
       Object.const_get("BottlishNumber")
     end.new(num)
