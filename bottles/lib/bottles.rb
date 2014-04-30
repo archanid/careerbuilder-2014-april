@@ -102,12 +102,18 @@ class BottlishNumber6 < BottlishNumber
   end
 end
 
-class BeerSongBottlishNumber
-  def action
-    "Take #{pronoun} down and pass it around"
-  end
+# class BeerSongBottlishNumber
+#   attr_accessor :bottle_number
+  
+#   def initialize(number)
+#     @bottle_number = number
+#   end
 
-  def pronoun
-    'one'
-  end
-end
+#   def action
+#     "Take #{pronoun} down and pass it around"
+#   end
+
+#   def pronoun
+#     'one'
+#   end
+# end
