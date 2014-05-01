@@ -108,6 +108,8 @@ This is the horse and the hound and the horn that belonged to the farmer sowing 
     assert_equal expected, tale.random_line(5).split(//).first(expected.length).join
   end
 
+  # TODO: can test if there are five segments in random_line(5)
+
   def test_random_contains
     lines.each { |line|
       assert tale.random_line(12).include?(line)
