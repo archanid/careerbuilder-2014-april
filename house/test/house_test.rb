@@ -99,18 +99,21 @@ This is the horse and the hound and the horn that belonged to the farmer sowing 
   end
 
   def test_random_end
+    skip
     expected = "the house that Jack built.\n"
-    assert_equal expected, tale.random.split(//).last(expected.length).join
+    assert_equal expected, tale.random_line(5).split(//).last(expected.length).join
   end
 
   def test_random_start
+    skip
     expected = "This is"
-    assert_equal expected, tale.random.split(//).first(expected.length).join
+    assert_equal expected, tale.random_line(5).split(//).first(expected.length).join
   end
 
   def test_random_contains
+    skip
     lines.each { |line|
-      assert tale.random.include?(line)
+      assert tale.random_recite.include?(line)
     }
   end
 

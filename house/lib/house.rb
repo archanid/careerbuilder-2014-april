@@ -4,7 +4,10 @@ class House
     1.upto(12).map {|i| line(i)}.join("\n")
   end
 
-  def random
+  def random_recite
+  end
+
+  def random_line
     "This is %s %s.\n" % [random_lines, segments.last(1).join(" ")]
   end
 
