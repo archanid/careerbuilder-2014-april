@@ -110,7 +110,7 @@ This is the horse and the hound and the horn that belonged to the farmer sowing 
 
   def test_random_contains
     lines.each { |line|
-      assert tale.random_recite.include?(line)
+      assert tale.random_line(12).include?(line)
     }
   end
 

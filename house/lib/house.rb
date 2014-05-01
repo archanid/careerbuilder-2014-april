@@ -19,7 +19,7 @@ class House
   private
 
   def random_lines(num)
-    shuffled_array(0, num-1).map {|i| segments[i]}.join(" ")
+    shuffled_array(0, num-2).map {|i| segments[i]}.join(" ")
   end
 
   def shuffled_array(lower_bound, upper_bound)
