@@ -32,11 +32,6 @@ class House
 
   def randomize_segments(num)
     shuffled_segments.last(num-1).join(" ")
-    shuffled_array(0, num-2).map {|i| segments[i]}.join(" ")
-  end
-
-  def shuffled_array(lower_bound, upper_bound)
-    lower_bound.upto(upper_bound).map {|i| i}.shuffle
   end
 
   def shuffled_segments
