@@ -12,7 +12,7 @@ class House
     if num == 1
       "This is %s.\n" % [last_phrase]
     else
-      "This is %s %s.\n" % [segments_minus_one.last(num-1).join(" "), last_phrase]
+      "This is %s %s.\n" % [sequence_segments(num), last_phrase]
     end
   end
   
@@ -25,6 +25,10 @@ class House
   end
 
   private
+
+  def sequence_segments(num)
+    segments_minus_one.last(num-1).join(" ")
+  end
 
   def randomize_segments(num)
     shuffled_array(0, num-2).map {|i| segments[i]}.join(" ")
