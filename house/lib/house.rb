@@ -8,17 +8,18 @@ class House
     1.upto(11).map {|i| random_line(i)}.join("\n")
   end
 
-  def random_line
-    "This is %s %s.\n" % [random_lines, segments.last(1).join(" ")]
-  end
-
   def line(num)
     "This is %s.\n" % segments.last(num).join(" ")
+  end
+  
+  def random_line(num)
+    "This is %s %s.\n" % [random_lines(num), segments.last(1).join(" ")]
   end
 
   private
 
-  def random_lines
+  def random_lines(num)
+    num = num - 1 # last phrase is included
     (0..random_segments.length-1).map {|i| segments[i]}.join(" ")
   end
 
