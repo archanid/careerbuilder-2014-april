@@ -13,12 +13,12 @@ class House
   end
   
   def random_line(num)
-    "This is %s %s.\n" % [random_lines(num), segments.last(1).join(" ")]
+    "This is %s %s.\n" % [randomize_segments(num), segments.last(1).join(" ")]
   end
 
   private
 
-  def random_lines(num)
+  def randomize_segments(num)
     shuffled_array(0, num-2).map {|i| segments[i]}.join(" ")
   end
 
