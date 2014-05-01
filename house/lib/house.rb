@@ -5,7 +5,7 @@ class House
   end
 
   def random_recite
-    1.upto(segments_minus_one.length).map {|i| random_line(i)}.join("\n")
+    1.upto(segments.length).map {|i| random_line(i)}.join("\n")
   end
 
   def line(num)
@@ -27,7 +27,7 @@ class House
   private
 
   def sequence_segments(num)
-    segments_minus_one.last(num-1).join(" ")
+    segments.last(num-1).join(" ")
   end
 
   def randomize_segments(num)
@@ -35,14 +35,14 @@ class House
   end
 
   def shuffled_segments
-    segments_minus_one.shuffle
+    segments.shuffle
   end
 
   def last_phrase
     "the house that Jack built"
   end
 
-  def segments_minus_one
+  def segments
     [ "the horse and the hound and the horn that belonged to",
       "the farmer sowing his corn that kept",
       "the rooster that crowed in the morn that woke",
