@@ -19,8 +19,11 @@ class House
   private
 
   def random_lines(num)
-    num = num - 1 # last phrase is included
-    (0..random_segments.length-1).map {|i| segments[i]}.join(" ")
+    shuffled_array(0, num-1).map {|i| segments[i]}.join(" ")
+  end
+
+  def shuffled_array(lower_bound, upper_bound)
+    lower_bound.upto(upper_bound).map {|i| i}.shuffle
   end
 
   def segments
