@@ -9,8 +9,8 @@ class House
   end
 
   def random_lines
-    (0..segments.length-2).map {|i| segments[i]}.join(" ")
     random_array.map {|i| segments[i]}.join(" ")
+    (0..segments.length-2).map {|i| segments[i]}.join(" ")
   end
 
   def random_array
