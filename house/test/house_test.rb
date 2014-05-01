@@ -110,6 +110,11 @@ This is the horse and the hound and the horn that belonged to the farmer sowing 
 
   # TODO: can test if there are five segments in random_line(5)
 
+  def test_random_1
+    expected = "This is the house that Jack built.\n"
+    assert_equal expected, tale.random_line(1)
+  end
+
   def test_random_contains
     lines.each { |line|
       assert tale.random_line(12).include?(line)

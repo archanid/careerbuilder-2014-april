@@ -17,7 +17,11 @@ class House
   end
   
   def random_line(num)
-    "This is %s %s.\n" % [randomize_segments(num), last_phrase]
+    if num == 1
+      "This is %s.\n" % [last_phrase]
+    else
+      "This is %s %s.\n" % [randomize_segments(num), last_phrase]
+    end
   end
 
   private
