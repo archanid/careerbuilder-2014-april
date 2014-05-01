@@ -31,11 +31,7 @@ class House
   end
 
   def randomize_segments(num)
-    shuffled_segments.last(num-1).join(" ")
-  end
-
-  def shuffled_segments
-    segments.shuffle
+    segments.shuffle.last(num-1).join(" ")
   end
 
   def last_phrase
