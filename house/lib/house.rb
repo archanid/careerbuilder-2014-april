@@ -5,7 +5,7 @@ class House
   end
 
   def random
-    "This is %s %s.\n" % [random_lines, segments.last(1)[0]]
+    "This is %s %s.\n" % [random_lines, segments.last(1).join]
   end
 
   def random_lines
