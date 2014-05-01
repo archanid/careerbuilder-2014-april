@@ -8,12 +8,14 @@ class House
     "This is %s %s.\n" % [random_lines, segments.last(1).join(" ")]
   end
 
-  def random_lines
-    (0..segments.length-2).map {|i| segments[i]}.join(" ")
-  end
-
   def line(num)
     "This is %s.\n" % segments.last(num).join(" ")
+  end
+
+  private
+
+  def random_lines
+    (0..segments.length-2).map {|i| segments[i]}.join(" ")
   end
 
   def segments
