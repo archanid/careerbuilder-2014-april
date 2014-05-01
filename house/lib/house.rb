@@ -7,6 +7,7 @@ class House
   def random
     puts segments.last(1)
     "This is %s the house that Jack built.\n" % [random_lines]
+    "This is %s %s.\n" % [random_lines, segments.last(1)[0]]
   end
 
   def random_lines
