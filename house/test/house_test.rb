@@ -114,9 +114,7 @@ This is the horse and the hound and the horn that belonged to the farmer sowing 
   end
 
   def test_random_12
-    segments.each { |seg|
-      assert tale.random_line(12).include?(seg)
-    }
+    segments.each { |seg| assert tale.random_line(12).include?(seg) }
   end
 
   def test_random_2
@@ -181,5 +179,4 @@ This is the horse and the hound and the horn that belonged to the farmer sowing 
       "the malt that lay in",
       "the house that Jack built"]
   end
-
 end
