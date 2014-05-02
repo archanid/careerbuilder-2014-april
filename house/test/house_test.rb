@@ -158,6 +158,26 @@ This is the horse and the hound and the horn that belonged to the farmer sowing 
     test_random(11)
   end
 
+  # def test_hearts
+  #   5.times do |i|
+  #     assert_equal 100, 100
+  #   end
+  # end    
+
+  # def test_poops
+  #   2.times do |i|
+  #     assert_equal i, i + 1
+  #   end
+  # end
+
+  # def test_skips
+  #   skip "don't care!"
+  # end
+
+  # def test_errors
+  #   raise "ruh roh"
+  # end
+
   private
 
   def test_random(num)
