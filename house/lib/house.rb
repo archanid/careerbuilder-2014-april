@@ -25,7 +25,8 @@ class Foo
   end
 
   def line
-    if num == 1
+    case num
+    when 1
       "This is %s.\n" % [last_phrase]
     else
       "This is %s %s.\n" % [sequence_segments, last_phrase]
@@ -33,7 +34,8 @@ class Foo
   end
   
   def random_line
-    if num == 1
+    case num
+    when 1
       "This is %s.\n" % [last_phrase]
     else
       "This is %s %s.\n" % [randomize_segments, last_phrase]
@@ -67,4 +69,8 @@ class Foo
       "the rat that ate", 
       "the malt that lay in"]
   end
+end
+
+class Variant
+
 end
