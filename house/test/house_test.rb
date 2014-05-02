@@ -120,66 +120,52 @@ This is the horse and the hound and the horn that belonged to the farmer sowing 
   end
 
   def test_random_2
-    test = tale.random_line(2).split(/This is /)[1].split(/.\n/)[0]
-    contains = segments.select { |seg| test != test.split(/#{seg}/).join }
-    assert_equal contains.length, 2
+    test_random(2)
   end
 
   def test_random_3
-    test = tale.random_line(3).split(/This is /)[1].split(/.\n/)[0]
-    contains = segments.select { |seg| test != test.split(/#{seg}/).join }
-    assert_equal contains.length, 3
+    test_random(3)
   end
 
   def test_random_4
-    test = tale.random_line(4).split(/This is /)[1].split(/.\n/)[0]
-    contains = segments.select { |seg| test != test.split(/#{seg}/).join }
-    assert_equal contains.length, 4
+    test_random(4)
   end
 
   def test_random_5
-    test = tale.random_line(5).split(/This is /)[1].split(/.\n/)[0]
-    contains = segments.select { |seg| test != test.split(/#{seg}/).join }
-    assert_equal contains.length, 5
+    test_random(5)
   end
 
   def test_random_6
-    test = tale.random_line(6).split(/This is /)[1].split(/.\n/)[0]
-    contains = segments.select { |seg| test != test.split(/#{seg}/).join }
-    assert_equal contains.length, 6
+    test_random(6)
   end
 
   def test_random_7
-    test = tale.random_line(7).split(/This is /)[1].split(/.\n/)[0]
-    contains = segments.select { |seg| test != test.split(/#{seg}/).join }
-    assert_equal contains.length, 7
+    test_random(7)
   end
 
   def test_random_8
-    test = tale.random_line(8).split(/This is /)[1].split(/.\n/)[0]
-    contains = segments.select { |seg| test != test.split(/#{seg}/).join }
-    assert_equal contains.length, 8
+    test_random(8)
   end
 
   def test_random_9
-    test = tale.random_line(9).split(/This is /)[1].split(/.\n/)[0]
-    contains = segments.select { |seg| test != test.split(/#{seg}/).join }
-    assert_equal contains.length, 9
+    test_random(9)
   end
 
   def test_random_10
-    test = tale.random_line(10).split(/This is /)[1].split(/.\n/)[0]
-    contains = segments.select { |seg| test != test.split(/#{seg}/).join }
-    assert_equal contains.length, 10
+    test_random(10)
   end
 
   def test_random_11
-    test = tale.random_line(11).split(/This is /)[1].split(/.\n/)[0]
-    contains = segments.select { |seg| test != test.split(/#{seg}/).join }
-    assert_equal contains.length, 11
+    test_random(11)
   end
 
   private
+
+  def test_random(num)
+    test = tale.random_line(num).split(/This is /)[1].split(/.\n/)[0]
+    contains = segments.select { |seg| test != test.split(/#{seg}/).join }
+    assert_equal contains.length, num
+  end
 
   def segments
     [ "the horse and the hound and the horn that belonged to",
