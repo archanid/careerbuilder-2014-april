@@ -6,7 +6,7 @@ class House
       when 1
         Variant1
       else
-        Foo
+        Variant
       end.new(i).line
     }.join("\n")
   end
@@ -17,7 +17,7 @@ class House
       when 1
         Variant1
       else
-        Foo
+        Variant
       end.new(i).random_line
     }.join("\n")
   end
@@ -27,7 +27,7 @@ class House
     when 1
       Variant1
     else
-      Foo
+      Variant
     end.new(n).line
   end
   
@@ -36,12 +36,12 @@ class House
     when 1
       Variant1
     else
-      Foo
+      Variant
     end.new(n).random_line
   end
 end
 
-class Foo 
+class Variant
   attr_reader :num
 
   def initialize(num)
@@ -85,7 +85,7 @@ class Foo
   end
 end
 
-class Variant1 < Foo
+class Variant1 < Variant
   def line
     "This is %s.\n" % [last_phrase]
   end
