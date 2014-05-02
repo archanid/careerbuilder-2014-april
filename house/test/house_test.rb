@@ -1,5 +1,6 @@
 gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
+require 'minitest/emoji'
 require 'minitest/pride'
 require_relative '../lib/house'
 
