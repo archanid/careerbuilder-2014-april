@@ -1,5 +1,4 @@
 class House
-
   def recite
     1.upto(12).map {|i| 
       case i
