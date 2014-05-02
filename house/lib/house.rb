@@ -1,19 +1,19 @@
 class House
 
   def recite
-    1.upto(12).map {|i| Foo.line(i)}.join("\n")
+    1.upto(12).map {|i| Foo.new(i).line}.join("\n")
   end
 
   def random_recite
-    1.upto(11).map {|i| Foo.random_line(i)}.join("\n")
+    1.upto(11).map {|i| Foo.new(i).random_line}.join("\n")
   end
 
-  def line(num)
-    Foo.line(num)
+  def line(n)
+    Foo.new(n).line
   end
   
-  def random_line(num)
-    Foo.random_line(num)
+  def random_line(n)
+    Foo.new(n).random_line
   end
 end
 
@@ -24,37 +24,37 @@ class Foo
     @num = num
   end
 
-  def self.line(num)
+  def line
     if num == 1
       "This is %s.\n" % [last_phrase]
     else
-      "This is %s %s.\n" % [sequence_segments(num), last_phrase]
+      "This is %s %s.\n" % [sequence_segments, last_phrase]
     end
   end
   
-  def self.random_line(num)
+  def random_line
     if num == 1
       "This is %s.\n" % [last_phrase]
     else
-      "This is %s %s.\n" % [randomize_segments(num), last_phrase]
+      "This is %s %s.\n" % [randomize_segments, last_phrase]
     end
   end
 
-  def self.sequence_segments(num)
+  def sequence_segments
     segments.last(num-1).join(" ")
   end
 
-  def self.randomize_segments(num)
+  def randomize_segments
     segments.shuffle.last(num-1).join(" ")
   end
 
   private
 
-  def self.last_phrase
+  def last_phrase
     "the house that Jack built"
   end
 
-  def self.segments
+  def segments
     [ "the horse and the hound and the horn that belonged to",
       "the farmer sowing his corn that kept",
       "the rooster that crowed in the morn that woke",
