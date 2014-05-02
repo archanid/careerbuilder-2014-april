@@ -1,19 +1,43 @@
 class House
 
   def recite
-    1.upto(12).map {|i| Foo.new(i).line}.join("\n")
+    1.upto(12).map {|i| 
+      case i
+      when 1
+        Variant1
+      else
+        Foo
+      end.new(i).line
+    }.join("\n")
   end
 
   def random_recite
-    1.upto(11).map {|i| Foo.new(i).random_line}.join("\n")
+    1.upto(11).map {|i| 
+      case i
+      when 1
+        Variant1
+      else
+        Foo
+      end.new(i).random_line
+    }.join("\n")
   end
 
   def line(n)
-    Foo.new(n).line
+    case n
+    when 1
+      Variant1
+    else
+      Foo
+    end.new(n).line
   end
   
   def random_line(n)
-    Foo.new(n).random_line
+    case n
+    when 1
+      Variant1
+    else
+      Foo
+    end.new(n).random_line
   end
 end
 
@@ -25,21 +49,11 @@ class Foo
   end
 
   def line
-    case num
-    when 1
-      "This is %s.\n" % [last_phrase]
-    else
-      "This is %s %s.\n" % [sequence_segments, last_phrase]
-    end
+    "This is %s %s.\n" % [sequence_segments, last_phrase]
   end
   
   def random_line
-    case num
-    when 1
-      "This is %s.\n" % [last_phrase]
-    else
-      "This is %s %s.\n" % [randomize_segments, last_phrase]
-    end
+    "This is %s %s.\n" % [randomize_segments, last_phrase]
   end
 
   def sequence_segments
@@ -71,6 +85,12 @@ class Foo
   end
 end
 
-class Variant
+class Variant1 < Foo
+  def line
+    "This is %s.\n" % [last_phrase]
+  end
 
+  def random_line
+    "This is %s.\n" % [last_phrase]
+  end
 end
