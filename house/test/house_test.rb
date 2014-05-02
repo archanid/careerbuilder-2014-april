@@ -116,14 +116,14 @@ This is the horse and the hound and the horn that belonged to the farmer sowing 
   end
 
   def test_random_contains
-    lines.each { |line|
-      assert tale.random_line(12).include?(line)
+    segments.each { |seg|
+      assert tale.random_line(12).include?(seg)
     }
   end
 
   private
 
-  def lines
+  def segments
     [ "the horse and the hound and the horn that belonged to",
       "the farmer sowing his corn that kept",
       "the rooster that crowed in the morn that woke",
