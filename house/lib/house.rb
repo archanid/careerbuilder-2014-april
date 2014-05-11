@@ -1,11 +1,15 @@
 class House
 
   def recite
-    1.upto(12).map {|i| line(i, false)}.join("\n")
+    sing
   end
 
   def random_recite
-    1.upto(12).map {|i| line(i, true)}.join("\n")
+    sing(true)
+  end
+
+  def sing(random=false)
+    1.upto(12).map {|i| line(i, random)}.join("\n")
   end
 
   def line(num, random=false)
