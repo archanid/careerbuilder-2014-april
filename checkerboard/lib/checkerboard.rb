@@ -5,9 +5,9 @@ class Checkerboard
 
   def to_s
     rows = []
-    row = ["B", "W"].join(" ")
+    row = ["B", "W"]
     rows << row
-    row = ["W", "B"].join(" ")
+    row = ["W", "B"]
     rows << row
 
     rows.map {|row| row.join(" ") + "\n"}.join
