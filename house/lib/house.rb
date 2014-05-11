@@ -11,10 +11,6 @@ class House
   def line(num, random=false)
     "This is %s.\n" % segments(random).last(num).join(" ")
   end
-  
-  def random_line(num)
-    "This is %s.\n" % segments(true).last(num).join(" ")
-  end
 
   private
 

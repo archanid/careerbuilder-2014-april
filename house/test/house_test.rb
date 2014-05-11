@@ -102,21 +102,21 @@ This is the horse and the hound and the horn that belonged to the farmer sowing 
 
   def test_random_end
     expected = "the house that Jack built.\n"
-    assert_equal expected, tale.random_line(5).split(//).last(expected.length).join
+    assert_equal expected, tale.line(5, true).split(//).last(expected.length).join
   end
 
   def test_random_start
     expected = "This is"
-    assert_equal expected, tale.random_line(5).split(//).first(expected.length).join
+    assert_equal expected, tale.line(5, true).split(//).first(expected.length).join
   end
 
   def test_random_1
     expected = "This is the house that Jack built.\n"
-    assert_equal expected, tale.random_line(1)
+    assert_equal expected, tale.line(1, true)
   end
 
   def test_random_12
-    segments.each { |seg| assert tale.random_line(12).include?(seg) }
+    segments.each { |seg| assert tale.line(12, true).include?(seg) }
   end
 
   def test_random_2
@@ -182,7 +182,7 @@ This is the horse and the hound and the horn that belonged to the farmer sowing 
   private
 
   def test_random(num)
-    test = tale.random_line(num).split(/This is /)[1].split(/.\n/)[0]
+    test = tale.line(num, true).split(/This is /)[1].split(/.\n/)[0]
     contains = segments.select { |seg| test != test.split(/#{seg}/).join }
     assert_equal contains.length, num
   end
