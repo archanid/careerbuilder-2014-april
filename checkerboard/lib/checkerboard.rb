@@ -1,17 +1,14 @@
 class Checkerboard
-
+  attr_reader :size
   def initialize(size)
+    @size = size
   end
 
   def to_s
     rows = []
-
-
-    2.times {|y|
-
+    size.times {|y|
       row = []
-
-      2.times {|x|
+      size.times {|x|
         if (x+y).even?
           row << "B"
         else
