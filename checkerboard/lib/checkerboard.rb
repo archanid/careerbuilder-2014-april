@@ -14,3 +14,9 @@ class Checkerboard
   end
 
 end
+
+class String
+  def join(_)
+    self
+  end
+end
