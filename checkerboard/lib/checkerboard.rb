@@ -12,18 +12,10 @@ class Checkerboard
       row = []
 
       2.times {|x|
-        if y == 0
-          if x == y
-            row << "B"
-          else
-            row << "W"
-          end
+        if x == y
+          row << "B"
         else
-          if x == y
-            row << "B"
-          else
-            row << "W"
-          end
+          row << "W"
         end
       }
       rows << row
