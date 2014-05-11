@@ -12,7 +12,7 @@ class Checkerboard
       row = []
 
       2.times {|x|
-        if x == y
+        if (x+y).even?
           row << "B"
         else
           row << "W"
