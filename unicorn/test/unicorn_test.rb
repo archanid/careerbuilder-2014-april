@@ -19,7 +19,6 @@ class UnicornTest < Minitest::Test
   end
 
   def test_it_knows_if_it_is_white
-    skip
     unicorn = Unicorn.new("Elisabeth")
     assert unicorn.white?
   end
