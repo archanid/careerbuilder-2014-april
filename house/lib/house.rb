@@ -13,7 +13,7 @@ class House
   end
   
   def random_line(num)
-    "This is %s %s.\n" % [random_lines(num), segments.last(1).join(" ")]
+    "This is %s.\n" % [segments(true).last(num).join(" ")]
   end
 
   private
