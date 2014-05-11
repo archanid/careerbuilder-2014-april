@@ -13,16 +13,16 @@ class Checkerboard
 
       2.times {|x|
         if y == 0
-          if x == 0
+          if x == y
             row << "B"
           else
             row << "W"
           end
         else
-          if x == 0
-            row << "W"
-          else
+          if x == y
             row << "B"
+          else
+            row << "W"
           end
         end
       }
