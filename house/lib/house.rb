@@ -1,15 +1,15 @@
 class House
 
   def recite
-    1.upto(12).map {|i| line(i)}.join("\n")
+    1.upto(12).map {|i| line(i, false)}.join("\n")
   end
 
   def random_recite
-    1.upto(11).map {|i| random_line(i)}.join("\n")
+    1.upto(12).map {|i| line(i, true)}.join("\n")
   end
 
-  def line(num)
-    "This is %s.\n" % segments(false).last(num).join(" ")
+  def line(num, random=false)
+    "This is %s.\n" % segments(random).last(num).join(" ")
   end
   
   def random_line(num)
