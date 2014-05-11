@@ -6,16 +6,19 @@ class Checkerboard
   def to_s
     rows = []
 
-    row = []
-    row << "B"
-    row << "W"
-    rows << row
 
-    row = []
-    row << "W"
-    row << "B"
-    rows << row
+    2.times {|y|
 
+      row = []
+      if y == 0
+        row << "B"
+        row << "W"
+      else
+        row << "W"
+        row << "B"
+      end
+      rows << row
+    }
     rows.map {|row| row.join(" ") + "\n"}.join
   end
 
