@@ -4,7 +4,7 @@ class Checkerboard
   end
 
   def to_s
-    "B W\nW B\n"
+    ["B W\nW B\n"].join
   end
 
 end
