@@ -2,6 +2,7 @@ gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
 require 'minitest/emoji'
 require 'minitest/pride'
+require 'pry'
 require_relative '../lib/house'
 
 class HouseTest < Minitest::Test
