@@ -1,7 +1,7 @@
 class House
 
   def recite
-    sing
+    sing(false)
   end
 
   def random_recite
@@ -9,14 +9,12 @@ class House
   end
 
   def sing(random=false)
-    1.upto(12).map {|i| line(i, random)}.join("\n")
+    1.upto(segments(random).length).map {|i| line(i, random)}.join("\n")
   end
 
   def line(num, random=false)
     "This is %s.\n" % segments(random).last(num).join(" ")
   end
-
-  private
 
   def segments(random=false)
     if random
@@ -25,6 +23,8 @@ class House
       segs
     end << "the house that Jack built"
   end
+
+  private
 
   def segs
     [ "the horse and the hound and the horn that belonged to",
