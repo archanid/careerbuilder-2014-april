@@ -14,14 +14,6 @@ class House
 
   private
 
-  def random_lines(num)
-    shuffled_array(0, num-2).map {|i| segments[i]}.join(" ")
-  end
-
-  def shuffled_array(lower_bound, upper_bound)
-    lower_bound.upto(upper_bound).map {|i| i}.shuffle
-  end
-
   def segments(random=false)
     if random
       segs.shuffle
