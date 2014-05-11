@@ -10,7 +10,7 @@ class Checkerboard
     row = ["W", "B"].join(" ")
     rows << row
 
-    rows.map {|row| row + "\n"}.join
+    rows.map {|row| row.join(" ") + "\n"}.join
   end
 
 end
