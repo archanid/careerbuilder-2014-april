@@ -1,4 +1,9 @@
 class House
+  attr_reader :phrasing
+
+  def initialize(phrasing=Phrasing.new(false))
+    @phrasing = phrasing
+  end
 
   def recite
     sing(false)
