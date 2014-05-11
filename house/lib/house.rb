@@ -53,15 +53,15 @@ class Phrasing
     @random = random
   end
 
-  def sing(random=false)
+  def sing
     1.upto(segments(random).length).map {|i| line(i, random)}.join("\n")
   end
 
-  def line(num, random=false)
+  def line(num)
     "This is %s.\n" % segments(random).last(num).join(" ")
   end
 
-  def segments(random=false)
+  def segments
     if random
       segs.shuffle
     else
