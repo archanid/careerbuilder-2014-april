@@ -34,7 +34,6 @@ class UnicornTest < Minitest::Test
   end
 
   def test_unicorn_says_sparkly_stuff
-    skip
     unicorn = Unicorn.new("Johnny")
     assert_equal "**;* Wonderful! **;*", unicorn.say("Wonderful!")
   end
