@@ -9,13 +9,11 @@ class UnicornTest < Minitest::Test
   end
 
   def test_it_can_be_named_something_else
-    skip
     unicorn = Unicorn.new("Joseph")
     assert_equal "Joseph", unicorn.name
   end
 
   def test_it_is_white_by_default
-    skip
     unicorn = Unicorn.new("Margaret")
     assert_equal "white", unicorn.color
   end
