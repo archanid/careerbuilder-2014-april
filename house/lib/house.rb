@@ -29,7 +29,6 @@ class Phrasing
 
   def order_phrases
     create_phrases
-    phrases
   end
 
   def create_phrases
