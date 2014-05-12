@@ -24,11 +24,7 @@ class Phrasing
   end
 
   def get_phrases
-    order_phrases << "the house that Jack built"
-  end
-
-  def order_phrases
-    create_phrases
+    create_phrases << "the house that Jack built"
   end
 
   def create_phrases
