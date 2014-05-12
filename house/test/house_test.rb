@@ -10,6 +10,7 @@ class HouseTest < Minitest::Test
   def setup
     @tale = House.new
     @random_tale = House.new(RandomPhrasing.new)
+    @super_random_tale = House.new(SuperRandomPhrasing.new)
   end
 
   def test_line_1

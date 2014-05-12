@@ -24,7 +24,11 @@ class Phrasing
   end
 
   def get_phrases
-    create_phrases << "the house that Jack built"
+    order_phrases << "the house that Jack built"
+  end
+
+  def order_phrases
+    create_phrases
   end
 
   def create_phrases
@@ -55,5 +59,11 @@ end
 class RandomPhrasing < Phrasing
   def create_phrases
     nouns.shuffle.zip(verbs.shuffle).map {|n, v| [n, v].join(" ")}
+  end
+end
+
+class SuperRandomPhrasing < Phrasing
+  def order_phrases
+    create_phrases.shuffle
   end
 end
