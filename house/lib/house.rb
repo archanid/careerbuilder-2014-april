@@ -31,10 +31,14 @@ class Phrasing
 
   def get_phrases
     if random
-      phrases.shuffle
+      order_phrases.shuffle
     else
-      phrases
+      order_phrases
     end << "the house that Jack built"
+  end
+
+  def order_phrases
+    phrases
   end
 
   private
@@ -55,7 +59,7 @@ class Phrasing
 end
 
 class RandomPhrasing < Phrasing
-  def get_phrases
+  def order_phrases
     phrases.shuffle
   end
 end
