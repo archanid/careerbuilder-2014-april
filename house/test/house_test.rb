@@ -184,8 +184,29 @@ This is the horse and the hound and the horn that belonged to the farmer sowing 
 
   def test_random(num)
     test = random_tale.line(num).split(/This is /)[1].split(/.\n/)[0]
-    contains = segments.select { |seg| test != test.split(/#{seg}/).join }
-    assert_equal contains.length, num
+    contained_nouns = nouns.select { |n| test != test.split(/#{n}/).join }
+    contained_verbs = verbs.select { |v| test != test.split(/#{v}/).join }
+    assert_equal contained_verbs.length, num
+    assert_equal contained_verbs.length, contained_nouns.length
+  end
+
+  def nouns
+    [ "the horse and the hound and the horn that",
+    "the farmer sowing his corn that",
+    "the rooster that crowed in the morn that",
+    "the priest all shaven and shorn that",
+    "the man all tattered and torn that",
+    "the maiden all forlorn that",
+    "the cow with the crumpled horn that",
+    "the dog that",
+    "the cat that",
+    "the rat that",
+    "the malt that",
+    "the house that"]
+  end
+
+  def verbs
+    [ "belonged to", "kept", "woke", "married", "kissed", "milked", "tossed", "worried", "killed", "ate", "lay in", "Jack built" ]
   end
 
   def segments
