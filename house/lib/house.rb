@@ -32,13 +32,12 @@ class Phrasing
   end
 
   def create_phrases
-    nouns.zip(verbs).map {|n, v| [n, v].join(" ")}
+    NOUNS.zip(VERBS).map {|n, v| [n, v].join(" ")}
   end
 
   private
 
-  def nouns
-    [ "the horse and the hound and the horn that",
+  NOUNS = [ "the horse and the hound and the horn that",
     "the farmer sowing his corn that",
     "the rooster that crowed in the morn that",
     "the priest all shaven and shorn that",
@@ -49,16 +48,13 @@ class Phrasing
     "the cat that",
     "the rat that",
     "the malt that"]
-  end
 
-  def verbs
-    [ "belonged to", "kept", "woke", "married", "kissed", "milked", "tossed", "worried", "killed", "ate", "lay in" ]
-  end
+  VERBS = [ "belonged to", "kept", "woke", "married", "kissed", "milked", "tossed", "worried", "killed", "ate", "lay in" ]
 end
 
 class SuperRandomPhrasing < Phrasing
   def create_phrases
-    nouns.shuffle.zip(verbs.shuffle).map {|n, v| [n, v].join(" ")}
+    NOUNS.shuffle.zip(VERBS.shuffle).map {|n, v| [n, v].join(" ")}
   end
 end
 
