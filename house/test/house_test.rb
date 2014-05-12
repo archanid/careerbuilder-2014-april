@@ -204,10 +204,8 @@ This is the horse and the hound and the horn that belonged to the farmer sowing 
 
   def test_random(num)
     test = random_tale.line(num).split(/This is /)[1].split(/.\n/)[0]
-    contained_nouns = nouns.select { |n| test != test.split(/#{n}/).join }
-    contained_verbs = verbs.select { |v| test != test.split(/#{v}/).join }
-    assert_equal contained_verbs.length, num
-    assert_equal contained_verbs.length, contained_nouns.length
+    contains = segments.select { |s| test != test.split(/#{s}/).join }
+    assert_equal contains.length, num
   end
 
   def test_super_random(num)
