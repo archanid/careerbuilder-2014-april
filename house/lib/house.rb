@@ -10,7 +10,7 @@ class House
   end
 
   def random_recite
-    sing(true)
+    phrasing.sing
   end
 
   def sing(random=false)
