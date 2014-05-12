@@ -9,7 +9,7 @@ class HouseTest < Minitest::Test
   attr_reader :tale, :random_tale
   def setup
     @tale = House.new
-    @random_tale = House.new(RandomPhrasing.new(true))
+    @random_tale = House.new(RandomPhrasing.new)
   end
 
   def test_line_1

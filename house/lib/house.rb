@@ -17,8 +17,7 @@ end
 class Phrasing
   attr_reader :random
 
-  def initialize(random=false)
-    @random = random
+  def initialize
   end
 
   def recite
@@ -30,11 +29,7 @@ class Phrasing
   end
 
   def get_phrases
-    if random
-      order_phrases.shuffle
-    else
-      order_phrases
-    end << "the house that Jack built"
+    order_phrases << "the house that Jack built"
   end
 
   def order_phrases
