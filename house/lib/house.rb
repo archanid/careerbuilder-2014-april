@@ -56,13 +56,13 @@ class Phrasing
   end
 end
 
-class RandomPhrasing < Phrasing
+class SuperRandomPhrasing < Phrasing
   def create_phrases
     nouns.shuffle.zip(verbs.shuffle).map {|n, v| [n, v].join(" ")}
   end
 end
 
-class SuperRandomPhrasing < Phrasing
+class RandomPhrasing < Phrasing
   def order_phrases
     create_phrases.shuffle
   end

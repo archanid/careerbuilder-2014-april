@@ -6,7 +6,7 @@ require 'pry'
 require_relative '../lib/house'
 
 class HouseTest < Minitest::Test
-  attr_reader :tale, :random_tale
+  attr_reader :tale, :random_tale, :super_random_tale
   def setup
     @tale = House.new
     @random_tale = House.new(RandomPhrasing.new)
@@ -102,6 +102,25 @@ This is the horse and the hound and the horn that belonged to the farmer sowing 
     assert_equal expected, tale.recite
   end
 
+  def test_super_random_end
+    expected = "the house that Jack built.\n"
+    assert_equal expected, super_random_tale.line(5).split(//).last(expected.length).join
+  end
+
+  def test_super_random_start
+    expected = "This is"
+    assert_equal expected, super_random_tale.line(5).split(//).first(expected.length).join
+  end
+
+  def test_super_random_1
+    expected = "This is the house that Jack built.\n"
+    assert_equal expected, super_random_tale.line(1)
+  end
+
+  def test_super_random_12
+    nouns.zip(verbs).flatten.each { |seg| assert super_random_tale.line(12).include?(seg) }
+  end
+
   def test_random_end
     expected = "the house that Jack built.\n"
     assert_equal expected, random_tale.line(5).split(//).last(expected.length).join
@@ -185,6 +204,14 @@ This is the horse and the hound and the horn that belonged to the farmer sowing 
 
   def test_random(num)
     test = random_tale.line(num).split(/This is /)[1].split(/.\n/)[0]
+    contained_nouns = nouns.select { |n| test != test.split(/#{n}/).join }
+    contained_verbs = verbs.select { |v| test != test.split(/#{v}/).join }
+    assert_equal contained_verbs.length, num
+    assert_equal contained_verbs.length, contained_nouns.length
+  end
+
+  def test_super_random(num)
+    test = super_random_tale.line(num).split(/This is /)[1].split(/.\n/)[0]
     contained_nouns = nouns.select { |n| test != test.split(/#{n}/).join }
     contained_verbs = verbs.select { |v| test != test.split(/#{v}/).join }
     assert_equal contained_verbs.length, num
