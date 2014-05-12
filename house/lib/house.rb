@@ -46,6 +46,24 @@ class Phrasing
     "the rat that ate",
     "the malt that lay in"]
   end
+
+  def nouns
+    [ "the horse and the hound and the horn that",
+    "the farmer sowing his corn that",
+    "the rooster that crowed in the morn that",
+    "the priest all shaven and shorn that",
+    "the man all tattered and torn that",
+    "the maiden all forlorn that",
+    "the cow with the crumpled horn that",
+    "the dog that",
+    "the cat that",
+    "the rat that",
+    "the malt that"]
+  end
+
+  def verbs
+    [ "belonged to", "kept", "woke", "married", "kissed", "milked", "tossed", "worried", "killed", "ate", "lay in" ]
+  end
 end
 
 class RandomPhrasing < Phrasing
