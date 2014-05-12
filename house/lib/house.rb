@@ -17,8 +17,8 @@ class House
     1.upto(segments(random).length).map {|i| line(i, random)}.join("\n")
   end
 
-  def line(num, random=false)
-    "This is %s.\n" % segments(random).last(num).join(" ")
+  def line(num)
+    phrasing.line(num)
   end
 
   def segments(random=false)

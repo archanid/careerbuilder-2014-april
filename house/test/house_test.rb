@@ -6,9 +6,10 @@ require 'pry'
 require_relative '../lib/house'
 
 class HouseTest < Minitest::Test
-  attr_reader :tale
+  attr_reader :tale, :random_tale
   def setup
     @tale = House.new
+    @random_tale = House.new(Phrasing.new(true))
   end
 
   def test_line_1
@@ -102,21 +103,21 @@ This is the horse and the hound and the horn that belonged to the farmer sowing 
 
   def test_random_end
     expected = "the house that Jack built.\n"
-    assert_equal expected, tale.line(5, true).split(//).last(expected.length).join
+    assert_equal expected, random_tale.line(5).split(//).last(expected.length).join
   end
 
   def test_random_start
     expected = "This is"
-    assert_equal expected, tale.line(5, true).split(//).first(expected.length).join
+    assert_equal expected, random_tale.line(5).split(//).first(expected.length).join
   end
 
   def test_random_1
     expected = "This is the house that Jack built.\n"
-    assert_equal expected, tale.line(1, true)
+    assert_equal expected, random_tale.line(1)
   end
 
   def test_random_12
-    segments.each { |seg| assert tale.line(12, true).include?(seg) }
+    segments.each { |seg| assert random_tale.line(12).include?(seg) }
   end
 
   def test_random_2
@@ -182,7 +183,7 @@ This is the horse and the hound and the horn that belonged to the farmer sowing 
   private
 
   def test_random(num)
-    test = tale.line(num, true).split(/This is /)[1].split(/.\n/)[0]
+    test = random_tale.line(num).split(/This is /)[1].split(/.\n/)[0]
     contains = segments.select { |seg| test != test.split(/#{seg}/).join }
     assert_equal contains.length, num
   end
