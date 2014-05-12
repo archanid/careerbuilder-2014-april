@@ -31,15 +31,15 @@ class Phrasing
 
   def segments
     if random
-      segs.shuffle
+      phrases.shuffle
     else
-      segs
+      phrases
     end << "the house that Jack built"
   end
 
   private
 
-  def segs
+  def phrases
     [ "the horse and the hound and the horn that belonged to",
     "the farmer sowing his corn that kept",
     "the rooster that crowed in the morn that woke",
