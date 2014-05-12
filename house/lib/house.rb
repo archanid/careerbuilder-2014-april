@@ -53,3 +53,9 @@ class Phrasing
     "the malt that lay in"]
   end
 end
+
+class RandomPhrasing < Phrasing
+  def get_phrases
+    phrases.shuffle
+  end
+end
