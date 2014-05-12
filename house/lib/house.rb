@@ -28,7 +28,12 @@ class Phrasing
   end
 
   def order_phrases
+    create_phrases
     phrases
+  end
+
+  def create_phrases
+    nouns.each_with_index.map {|n, i| [n, verbs[i]].join(" ")}
   end
 
   private
