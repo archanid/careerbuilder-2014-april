@@ -32,7 +32,6 @@ class Phrasing
   end
 
   def create_phrases
-    nouns.each_with_index.map {|n, i| [n, verbs[i]].join(" ")}
     nouns.zip(verbs).map {|n, v| [n, v].join(" ")}
   end
 
