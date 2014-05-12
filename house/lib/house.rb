@@ -9,10 +9,6 @@ class House
     phrasing.sing
   end
 
-  def random_recite
-    phrasing.sing
-  end
-
   def line(num)
     phrasing.line(num)
   end
