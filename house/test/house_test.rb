@@ -117,7 +117,7 @@ This is the horse and the hound and the horn that belonged to the farmer sowing 
   end
 
   def test_random_12
-    segments.each { |seg| assert random_tale.line(12).include?(seg) }
+    nouns.zip(verbs).flatten.each { |seg| assert random_tale.line(12).include?(seg) }
   end
 
   def test_random_2
