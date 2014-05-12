@@ -72,6 +72,6 @@ end
 
 class RandomPhrasing < Phrasing
   def order_phrases
-    phrases.shuffle
+    create_phrases.shuffle
   end
 end
