@@ -15,11 +15,6 @@ class House
 end
 
 class Phrasing
-  attr_reader :random
-
-  def initialize
-  end
-
   def recite
     1.upto(get_phrases.length).map {|i| line(i)}.join("\n")
   end
