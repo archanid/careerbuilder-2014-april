@@ -6,7 +6,7 @@ class House
   end
 
   def recite
-    phrasing.sing
+    phrasing.recite
   end
 
   def line(num)
@@ -21,7 +21,7 @@ class Phrasing
     @random = random
   end
 
-  def sing
+  def recite
     1.upto(segments.length).map {|i| line(i)}.join("\n")
   end
 
