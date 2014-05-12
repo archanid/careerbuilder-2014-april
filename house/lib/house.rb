@@ -13,10 +13,6 @@ class House
     phrasing.sing
   end
 
-  def sing(random=false)
-    1.upto(segments(random).length).map {|i| line(i, random)}.join("\n")
-  end
-
   def line(num)
     phrasing.line(num)
   end
