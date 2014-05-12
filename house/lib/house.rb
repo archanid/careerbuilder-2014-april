@@ -1,7 +1,7 @@
 class House
   attr_reader :phrasing
 
-  def initialize(phrasing=Phrasing.new(false))
+  def initialize(phrasing=Phrasing.new)
     @phrasing = phrasing
   end
 
