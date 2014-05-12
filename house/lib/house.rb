@@ -6,7 +6,7 @@ class House
   end
 
   def recite
-    sing(false)
+    phrasing.sing
   end
 
   def random_recite
@@ -54,11 +54,11 @@ class Phrasing
   end
 
   def sing
-    1.upto(segments(random).length).map {|i| line(i, random)}.join("\n")
+    1.upto(segments.length).map {|i| line(i)}.join("\n")
   end
 
   def line(num)
-    "This is %s.\n" % segments(random).last(num).join(" ")
+    "This is %s.\n" % segments.last(num).join(" ")
   end
 
   def segments
