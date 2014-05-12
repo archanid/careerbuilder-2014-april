@@ -22,14 +22,14 @@ class Phrasing
   end
 
   def recite
-    1.upto(segments.length).map {|i| line(i)}.join("\n")
+    1.upto(get_phrases.length).map {|i| line(i)}.join("\n")
   end
 
   def line(num)
-    "This is %s.\n" % segments.last(num).join(" ")
+    "This is %s.\n" % get_phrases.last(num).join(" ")
   end
 
-  def segments
+  def get_phrases
     if random
       phrases.shuffle
     else
